@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-950">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build 2026 Chatbot · Agentic AI Catalog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500: '#7c5cff', 600: '#6347ff', 700: '#4d33e0' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <!-- markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.5/dist/purify.min.js"></script>
+</head>
+<body class="min-h-full text-slate-100 font-sans">
+  <div class="mx-auto max-w-5xl px-4 py-6">
+    <!-- Header -->
+    <header class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 grid place-items-center shadow-lg shadow-brand-500/30">
+          <span class="text-lg">🤖</span>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight">Build 2026 · Chatbot</h1>
+          <p id="health" class="text-xs text-slate-400">loading…</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="/announcements" class="text-xs px-3 py-1.5 rounded-lg bg-slate-800/70 hover:bg-slate-800 border border-slate-700/60 text-slate-200">📜 All announcements</a>
+        <a href="https://build.microsoft.com/en-US/sessions" target="_blank" rel="noopener"
+           class="text-xs px-3 py-1.5 rounded-lg bg-slate-800/70 hover:bg-slate-800 border border-slate-700/60 text-slate-200">↗ Session catalog</a>
+      </div>
+    </header>
+
+    <!-- Topic chips -->
+    <section class="mb-4">
+      <p class="text-xs uppercase tracking-widest text-slate-500 mb-2">Quick topics</p>
+      <div id="chips" class="flex flex-wrap gap-2"></div>
+    </section>
+
+    <!-- Chat surface -->
+    <main class="rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur shadow-xl shadow-black/30">
+      <div id="thread" class="p-5 space-y-4 min-h-[60vh] max-h-[70vh] overflow-y-auto"></div>
+
+      <!-- Composer -->
+      <form id="composer" class="border-t border-slate-800 p-3 flex gap-2 items-end">
+        <textarea id="input"
+          rows="1"
+          placeholder="Ask: 'What did Naomi say about prompt caching?'  ·  'Summarize Windows sessions'  ·  'BRK230'"
+          class="flex-1 resize-none px-4 py-3 rounded-xl bg-slate-950/70 border border-slate-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 outline-none text-sm placeholder-slate-500"></textarea>
+        <button type="submit"
+          class="px-4 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-lg shadow-brand-700/30 transition disabled:opacity-50">
+          Ask
+        </button>
+      </form>
+    </main>
+
+    <footer class="mt-6 text-center text-xs text-slate-500">
+      Built locally · Data scraped from public Microsoft Build 2026 session pages · No login required
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
