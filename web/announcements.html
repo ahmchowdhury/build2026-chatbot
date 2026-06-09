@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-950">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build 2026 · Announcement Index</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500: '#7c5cff', 600: '#6347ff', 700: '#4d33e0' },
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="min-h-full text-slate-100 font-sans">
+  <div class="mx-auto max-w-6xl px-4 py-6">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 grid place-items-center shadow-lg shadow-brand-500/30">
+          <span class="text-lg">📢</span>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight">Build 2026 · Announcement Index</h1>
+          <p id="subtitle" class="text-xs text-slate-400">loading…</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="/" class="text-xs px-3 py-1.5 rounded-lg bg-slate-800/70 hover:bg-slate-800 border border-slate-700/60 text-slate-200">← Chatbot</a>
+        <a href="/announcements.md" class="text-xs px-3 py-1.5 rounded-lg bg-slate-800/70 hover:bg-slate-800 border border-slate-700/60 text-slate-200">📄 Markdown</a>
+        <a href="https://build.microsoft.com/en-US/sessions" target="_blank" rel="noopener"
+           class="text-xs px-3 py-1.5 rounded-lg bg-slate-800/70 hover:bg-slate-800 border border-slate-700/60 text-slate-200">↗ Session catalog</a>
+      </div>
+    </header>
+
+    <!-- Filter bar -->
+    <section class="mb-6 grid md:grid-cols-[1fr,2fr,auto] gap-3 items-stretch">
+      <!-- Topic dropdown (matches Build site UX) -->
+      <div class="relative">
+        <label for="topicSelect" class="absolute -top-2 left-3 text-[10px] uppercase tracking-wider text-slate-400 bg-slate-950 px-1">Topic</label>
+        <select id="topicSelect"
+                class="w-full appearance-none rounded-xl border border-slate-700/70 bg-slate-900/70 px-4 py-3 pr-10 text-sm font-medium text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500/60 focus:border-brand-500">
+          <option value="all">All topics</option>
+        </select>
+        <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">▾</span>
+      </div>
+
+      <!-- Search -->
+      <div class="relative">
+        <label for="searchInput" class="absolute -top-2 left-3 text-[10px] uppercase tracking-wider text-slate-400 bg-slate-950 px-1">Search</label>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Filter announcements (e.g. prompt cache, Maia 200, Agent 365)…"
+               class="w-full rounded-xl border border-slate-700/70 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/60 focus:border-brand-500" />
+      </div>
+
+      <!-- Stats / clear -->
+      <div class="flex items-center gap-2">
+        <span id="resultCount" class="text-xs text-slate-400 whitespace-nowrap">—</span>
+        <button id="clearBtn" class="text-xs px-3 py-2 rounded-lg bg-slate-800/70 hover:bg-slate-800 border border-slate-700/60 text-slate-200">Reset</button>
+      </div>
+    </section>
+
+    <!-- Topic chips (quick filter) -->
+    <div id="topicChips" class="flex flex-wrap gap-2 mb-6"></div>
+
+    <!-- Empty / loading -->
+    <div id="emptyState" class="hidden p-8 rounded-2xl border border-dashed border-slate-700/70 bg-slate-900/30 text-center text-slate-400">
+      No announcements match your filters. <button id="emptyReset" class="underline text-brand-500">Reset</button>
+    </div>
+
+    <!-- Sections render here -->
+    <main id="sections" class="space-y-8"></main>
+
+    <footer class="mt-10 text-center text-xs text-slate-500">
+      <span id="footerStamp">—</span> · Mined from public Microsoft Build 2026 session AI summaries on <a class="underline" href="https://build.microsoft.com/en-US/sessions" target="_blank" rel="noopener">build.microsoft.com</a> + the public <a class="underline" href="https://github.com/microsoft/Build26-news" target="_blank" rel="noopener">microsoft/Build26-news</a> repo.
+    </footer>
+  </div>
+
+  <script>
+    // Topic display labels (mapped from internal taxonomy → UX labels
+    // similar to the Build site filter shown in the screenshot).
+    const TOPIC_LABELS = {
+      "AI Foundry": "AI Foundry",
+      "AI Infrastructure": "AI Infrastructure",
+      "Models": "Working with models",
+      "Agents": "Agents & apps",
+      "Windows": "Windows",
+      "Developer Tools": "Developer tools & frameworks",
+      "Data + AI": "Cloud platform & data",
+      "Microsoft IQ": "Microsoft IQ",
+      "Security + Governance": "Responsible AI",
+      "Discovery + Frontier Science": "Frontier science",
+      "M365 Copilot": "M365 Copilot",
+      "Other": "Other / Cross-cutting",
+    };
+
+    const TOPIC_EMOJI = {
+      "AI Foundry": "🏛️",
+      "AI Infrastructure": "⚙️",
+      "Models": "🧠",
+      "Agents": "🤖",
+      "Windows": "🪟",
+      "Developer Tools": "🛠️",
+      "Data + AI": "🗄️",
+      "Microsoft IQ": "💡",
+      "Security + Governance": "🛡️",
+      "Discovery + Frontier Science": "🔬",
+      "M365 Copilot": "📎",
+      "Other": "🧩",
+    };
+
+    let DATA = null;
+    let activeTopic = "all";
+    let activeSearch = "";
+
+    function escapeHtml(s) {
+      return (s || "").replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[c]);
+    }
+
+    function highlight(text, q) {
+      if (!q) return escapeHtml(text);
+      const safe = escapeHtml(text);
+      const re = new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ")", "ig");
+      return safe.replace(re, '<mark class="bg-brand-500/30 text-white rounded px-0.5">$1</mark>');
+    }
+
+    function topicLabel(t) { return TOPIC_LABELS[t] || t; }
+    function topicEmoji(t) { return TOPIC_EMOJI[t] || "•"; }
+
+    function buildTopicSelect() {
+      const sel = document.getElementById('topicSelect');
+      // Build options sorted by user-friendly label, but always keep
+      // "All topics" first.
+      const sorted = [...DATA.topics].sort((a, b) =>
+        topicLabel(a.name).localeCompare(topicLabel(b.name)));
+      for (const t of sorted) {
+        const opt = document.createElement('option');
+        opt.value = t.name;
+        opt.textContent = `${topicEmoji(t.name)}  ${topicLabel(t.name)}  (${t.count})`;
+        sel.appendChild(opt);
+      }
+    }
+
+    function buildTopicChips() {
+      const wrap = document.getElementById('topicChips');
+      wrap.innerHTML = '';
+      const allChip = makeChip("all", "All", DATA.total);
+      wrap.appendChild(allChip);
+      const sorted = [...DATA.topics].sort((a, b) => b.count - a.count);
+      for (const t of sorted) {
+        wrap.appendChild(makeChip(t.name, topicLabel(t.name), t.count));
+      }
+    }
+
+    function makeChip(value, label, count) {
+      const btn = document.createElement('button');
+      btn.dataset.value = value;
+      btn.className = "text-xs px-3 py-1.5 rounded-full border transition-colors " +
+        (value === activeTopic
+          ? "bg-brand-500/30 border-brand-500/60 text-white"
+          : "bg-slate-800/60 border-slate-700/60 text-slate-300 hover:bg-slate-800");
+      btn.innerHTML = (value === "all" ? "" : `${topicEmoji(value)} `) +
+        `${escapeHtml(label)} <span class="text-slate-400">${count}</span>`;
+      btn.addEventListener('click', () => {
+        activeTopic = value;
+        document.getElementById('topicSelect').value = value;
+        render();
+      });
+      return btn;
+    }
+
+    function filteredItems() {
+      const q = activeSearch.trim().toLowerCase();
+      return DATA.items.filter(it => {
+        if (activeTopic !== "all" && it.topic !== activeTopic) return false;
+        if (!q) return true;
+        return (it.sentence + " " + it.title + " " + it.code + " " + (it.speakers || ""))
+          .toLowerCase().includes(q);
+      });
+    }
+
+    function render() {
+      const items = filteredItems();
+      const main = document.getElementById('sections');
+      const empty = document.getElementById('emptyState');
+      const cnt = document.getElementById('resultCount');
+      cnt.textContent = `${items.length} of ${DATA.total} items`;
+
+      if (!items.length) {
+        main.innerHTML = '';
+        empty.classList.remove('hidden');
+        buildTopicChips();
+        return;
+      }
+      empty.classList.add('hidden');
+
+      // Group by topic → by session code
+      const byTopic = new Map();
+      for (const it of items) {
+        if (!byTopic.has(it.topic)) byTopic.set(it.topic, new Map());
+        const sessions = byTopic.get(it.topic);
+        if (!sessions.has(it.code)) sessions.set(it.code, []);
+        sessions.get(it.code).push(it);
+      }
+
+      // Render in the order topics appear in DATA.topics
+      const orderedTopics = DATA.topics
+        .map(t => t.name)
+        .filter(t => byTopic.has(t));
+
+      const html = orderedTopics.map(topic => {
+        const sessions = byTopic.get(topic);
+        const topicItemCount = items.filter(x => x.topic === topic).length;
+        const sessionBlocks = [...sessions.entries()].map(([code, list]) => {
+          const first = list[0];
+          const links = [];
+          links.push(`<a href="${first.session_url}" target="_blank" rel="noopener" class="text-brand-500 hover:text-brand-600 underline-offset-2 hover:underline">Session page ↗</a>`);
+          if (first.transcript) links.push(`<a href="${first.transcript}" target="_blank" rel="noopener" class="text-slate-400 hover:text-slate-200">Transcript</a>`);
+          if (first.video) links.push(`<a href="${first.video}" target="_blank" rel="noopener" class="text-slate-400 hover:text-slate-200">Video</a>`);
+
+          const bullets = list.map(it =>
+            `<li class="leading-relaxed">${highlight(it.sentence, activeSearch)}</li>`
+          ).join("");
+
+          return `
+            <article class="rounded-xl border border-slate-800/80 bg-slate-900/40 p-4 hover:border-slate-700 transition-colors">
+              <header class="flex items-baseline gap-2 mb-1 flex-wrap">
+                <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-brand-500/20 text-brand-500 border border-brand-500/30">${escapeHtml(code)}</span>
+                <h3 class="text-sm font-semibold text-slate-100">${highlight(first.title, activeSearch)}</h3>
+              </header>
+              ${first.speakers ? `<p class="text-xs text-slate-400 mb-2">${escapeHtml(first.speakers)}</p>` : ""}
+              <ul class="text-sm text-slate-200 space-y-1.5 list-disc pl-5 marker:text-brand-500/70">${bullets}</ul>
+              <div class="mt-3 flex gap-3 text-xs">${links.join(' · ')}</div>
+            </article>`;
+        }).join("");
+
+        return `
+          <section data-topic="${escapeHtml(topic)}">
+            <header class="flex items-center justify-between mb-3">
+              <h2 class="text-lg font-bold tracking-tight flex items-center gap-2">
+                <span>${topicEmoji(topic)}</span>
+                <span>${escapeHtml(topicLabel(topic))}</span>
+                <span class="text-xs font-normal text-slate-400">${topicItemCount} items</span>
+              </h2>
+            </header>
+            <div class="grid md:grid-cols-2 gap-3">${sessionBlocks}</div>
+          </section>`;
+      }).join("");
+
+      main.innerHTML = html;
+      buildTopicChips();
+    }
+
+    async function init() {
+      try {
+        const r = await fetch('/api/announcements');
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        DATA = await r.json();
+        document.getElementById('subtitle').textContent =
+          `${DATA.total} announcement-signal items across ${DATA.topics.length} topics · generated ${DATA.generated_at}`;
+        document.getElementById('footerStamp').textContent =
+          "Generated " + DATA.generated_at;
+        buildTopicSelect();
+        render();
+      } catch (e) {
+        document.getElementById('subtitle').textContent = "⚠ Failed to load announcements: " + e;
+        document.getElementById('sections').innerHTML =
+          '<div class="p-6 rounded-xl border border-red-700/40 bg-red-900/20 text-red-200">' +
+          'Could not load <code>/api/announcements</code>. Try regenerating with <code>python scripts/build_announcements.py</code>.</div>';
+      }
+    }
+
+    document.getElementById('topicSelect').addEventListener('change', e => {
+      activeTopic = e.target.value;
+      render();
+    });
+    document.getElementById('searchInput').addEventListener('input', e => {
+      activeSearch = e.target.value;
+      render();
+    });
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      activeTopic = "all";
+      activeSearch = "";
+      document.getElementById('topicSelect').value = "all";
+      document.getElementById('searchInput').value = "";
+      render();
+    });
+    document.getElementById('emptyReset').addEventListener('click', () => {
+      activeTopic = "all";
+      activeSearch = "";
+      document.getElementById('topicSelect').value = "all";
+      document.getElementById('searchInput').value = "";
+      render();
+    });
+
+    init();
+  </script>
+</body>
+</html>

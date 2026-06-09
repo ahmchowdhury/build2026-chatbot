@@ -200,6 +200,43 @@ def main():
     OUT.write_text(md)
     print(f"\nWrote {OUT} ({len(md)} chars)")
 
+    # Also emit a structured JSON view that the web UI consumes for
+    # the topic-dropdown announcements page. Keeping this alongside
+    # the markdown so both formats stay in sync (regenerate together).
+    json_out = ROOT / "data" / "announcements.json"
+    flat_items: list = []
+    for topic in list(TOPICS.keys()) + ["Other"]:
+        for it in bucket.get(topic, []):
+            flat_items.append({
+                "topic": topic,
+                "code": it["code"],
+                "title": it["title"],
+                "speakers": it["speakers"],
+                "sentence": it["sentence"],
+                "transcript": it.get("transcript"),
+                "video": it.get("video"),
+                "session_url": SESSION_URL.format(code=it["code"]),
+            })
+    payload = {
+        "generated_at": __import__("datetime").datetime.utcnow()
+            .replace(microsecond=0).isoformat() + "Z",
+        "total": len(flat_items),
+        "topics": [
+            {
+                "name": t,
+                "description": TOPICS[t]["description"]
+                    if t in TOPICS else "Cross-cutting / uncategorized",
+                "count": sum(1 for x in flat_items if x["topic"] == t),
+            }
+            for t in list(TOPICS.keys()) + ["Other"]
+            if any(x["topic"] == t for x in flat_items)
+        ],
+        "items": flat_items,
+    }
+    json_out.write_text(json.dumps(payload, indent=2))
+    print(f"Wrote {json_out} ({len(flat_items)} items, "
+          f"{len(payload['topics'])} topics)")
+
 
 if __name__ == "__main__":
     main()

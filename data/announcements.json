@@ -1,0 +1,2288 @@
+{
+  "generated_at": "2026-06-09T19:23:12Z",
+  "total": 224,
+  "topics": [
+    {
+      "name": "AI Foundry",
+      "description": "Microsoft Foundry \u2014 model catalog, Agent Service, Agent Framework, Foundry Toolkit, hosted agents, evaluations, fine-tuning",
+      "count": 83
+    },
+    {
+      "name": "AI Infrastructure",
+      "description": "Azure AI infrastructure \u2014 Maia/Cobalt silicon, Manifold, Context Cache, prompt caching, inference optimization, containers",
+      "count": 36
+    },
+    {
+      "name": "Models",
+      "description": "Frontier and open models \u2014 MAI family, GPT-5.x, Claude/Anthropic, Llama, Mistral, Phi, Aurora geospatial, Image 2.5",
+      "count": 38
+    },
+    {
+      "name": "Agents",
+      "description": "Agent platforms and patterns \u2014 Agent 365, Autopilot, Scout, Claw + Agent Harness, OpenClaw, MCP, Toolbox, ACS, ASSERT",
+      "count": 35
+    },
+    {
+      "name": "Windows",
+      "description": "Windows for developers and agents \u2014 WSL Containers, Surface RTX Spark, Copilot+ PCs, on-device AI, Windows ML",
+      "count": 8
+    },
+    {
+      "name": "Developer Tools",
+      "description": "GitHub + VS Code + GitHub Copilot \u2014 CLI, Copilot app, Auto Fix, Azure DevOps integration, agentic SDLC",
+      "count": 17
+    },
+    {
+      "name": "Security + Governance",
+      "description": "Agent governance and security \u2014 Agent 365, Purview, Defender, Entra, ASSERT, ACS, evaluation frameworks",
+      "count": 3
+    },
+    {
+      "name": "Other",
+      "description": "Cross-cutting / uncategorized",
+      "count": 4
+    }
+  ],
+  "items": [
+    {
+      "topic": "AI Foundry",
+      "code": "BRK209",
+      "title": "Japan Wrap-up Session",
+      "speakers": "Tadashi Okazaki",
+      "sentence": "The host explains that this 45-minute session will summarize the most important announcements from Build 2026 and present them clearly in Japanese for both livestream and local attendees (00:00:25\u201300:01:00).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/52082998-f4df-4fbb-8b20-f285b89fd486",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK209"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK209",
+      "title": "Japan Wrap-up Session",
+      "speakers": "Tadashi Okazaki",
+      "sentence": "Experts from different fields at Microsoft Japan are introduced, and the first speaker, Executive Officer Okazaki, takes the stage to discuss Build 2026\u2019s primary themes and announcements.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/52082998-f4df-4fbb-8b20-f285b89fd486",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK209"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK209",
+      "title": "Japan Wrap-up Session",
+      "speakers": "Tadashi Okazaki",
+      "sentence": "Microsoft introduced new chipsets\u2014Maia 200 and Cobalt 200\u2014designed to enhance energy efficiency and AI workload processing across cloud and edge (00:05:29\u201300:06:04).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/52082998-f4df-4fbb-8b20-f285b89fd486",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK209"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK209",
+      "title": "Japan Wrap-up Session",
+      "speakers": "Tadashi Okazaki",
+      "sentence": "Database breakthroughs, like Azure\u2019s HorizonDB public preview and GPU-accelerated Fabric Data Warehouse, were showcased to strengthen enterprise-scale data operations (00:06:45\u201300:07:23).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/52082998-f4df-4fbb-8b20-f285b89fd486",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK209"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK209",
+      "title": "Japan Wrap-up Session",
+      "speakers": "Tadashi Okazaki",
+      "sentence": "Yamamoto later discusses infrastructure scaling, highlighting Microsoft\u2019s AI data center expansion focused on sustainability (Fairwater project), modernization support through Azure migration Copilot for mainframe-inclusive architectures, and the unveiling of Layfin\u2014a framework that allows rapid AI-powered backend construction for production-ready applications (00:41:04\u201300:45:03).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/52082998-f4df-4fbb-8b20-f285b89fd486",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK209"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK221",
+      "title": "Idea to production-ready agent in seconds on AI-native runtime",
+      "speakers": "Simon Jakesch, Devanshi Joshi, Gopi Prashanth",
+      "sentence": "The demo validates cold start under 100 milliseconds, sandbox persistence, connector inheritance, and strong network isolation\u2014key architectural features of Azure Container Apps sandboxes in public preview.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8508448f-e225-4efd-b0ae-f89c2c2b91b5",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8508448f-e225-4efd-b0ae-f89c2c2b91b5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK221"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK221",
+      "title": "Idea to production-ready agent in seconds on AI-native runtime",
+      "speakers": "Simon Jakesch, Devanshi Joshi, Gopi Prashanth",
+      "sentence": "Product Announcements and Customer Use Cases: Transitioning back, Devanshi announces Azure Container Apps Sandboxes and Container Apps Express as a fast, isolated compute infrastructure executing workloads securely by default (00:27:00\u201300:29:00).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8508448f-e225-4efd-b0ae-f89c2c2b91b5",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8508448f-e225-4efd-b0ae-f89c2c2b91b5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK221"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK221",
+      "title": "Idea to production-ready agent in seconds on AI-native runtime",
+      "speakers": "Simon Jakesch, Devanshi Joshi, Gopi Prashanth",
+      "sentence": "Closing Insights and Q&A: Devanshi concludes the session summarizing that container apps and sandboxes are transforming AI agent production pipelines, now available in public preview (00:41:12).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8508448f-e225-4efd-b0ae-f89c2c2b91b5",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8508448f-e225-4efd-b0ae-f89c2c2b91b5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK221"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK222",
+      "title": "The honest practitioner's take on agentic AI on Kubernetes",
+      "speakers": "Lachie Evenson",
+      "sentence": "He announces the public preview of \"Anyscale on Azure\" (00:25:15), a managed Ray service jointly developed with Anyscale, integrated with Azure\u2019s identity and billing ecosystem.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9466a393-4172-4f0a-9849-190dab1b2623",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9466a393-4172-4f0a-9849-190dab1b2623",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK222"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK222",
+      "title": "The honest practitioner's take on agentic AI on Kubernetes",
+      "speakers": "Lachie Evenson",
+      "sentence": "Announcements, Real-World Cases, and Closing Takeaways: Near 00:42:12, Lachlan announces new AKS features: Automatic node pools for simplified scaling, Azure Container Linux for secure, minimal OS footprints, AKS on bare metal for virtualization-free performance, and Fleet for managing multi-cluster topologies.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9466a393-4172-4f0a-9849-190dab1b2623",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9466a393-4172-4f0a-9849-190dab1b2623",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK222"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK224",
+      "title": "PepsiCo\u2019s blueprint for agentic AI",
+      "speakers": "Krunal Patel, Rishabh Saha, Bob Ward, Govanna Flores",
+      "sentence": "They introduce the central challenge faced by key account managers (Cams): fragmented information across numerous systems and reports, described vividly between 00:09:04\u201300:10:00.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/95afb175-5c57-46c2-bd53-d67dda3d0888",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK224"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK230",
+      "title": "Build smarter AI systems in Foundry as models and costs evolve",
+      "speakers": "Yina Arenas, Naomi Moneypenny, Sharmila Chockalingam",
+      "sentence": "Yina introduces custom and rubric-based evaluation tools now available in Foundry (00:25:00), complementing built-in quality, safety, and compliance evaluators.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/fb5d9581-c0ac-4290-9a9b-1fdcb98d6443",
+      "video": "https://medius.microsoft.com/Embed/video-nc/fb5d9581-c0ac-4290-9a9b-1fdcb98d6443",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK230"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK230",
+      "title": "Build smarter AI systems in Foundry as models and costs evolve",
+      "speakers": "Yina Arenas, Naomi Moneypenny, Sharmila Chockalingam",
+      "sentence": "She announces explicit prompt caching \u2014 a new Azure capability granting developers private, persistent caching layers to cut latency and token costs (00:32:00).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/fb5d9581-c0ac-4290-9a9b-1fdcb98d6443",
+      "video": "https://medius.microsoft.com/Embed/video-nc/fb5d9581-c0ac-4290-9a9b-1fdcb98d6443",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK230"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK231",
+      "title": "Deploy. Observe. Learn. Reinforcement learning for production agents",
+      "speakers": "Alicia Frame, Omkar More, Long Chen",
+      "sentence": "They outline the talk\u2019s flow\u2014covering fine-tuning, reinforcement learning, demos, and the upcoming low-level training API.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/2e2fd0b4-5960-4c31-b9d2-946486fbbe5f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/2e2fd0b4-5960-4c31-b9d2-946486fbbe5f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK231"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK231",
+      "title": "Deploy. Observe. Learn. Reinforcement learning for production agents",
+      "speakers": "Alicia Frame, Omkar More, Long Chen",
+      "sentence": "Demo 3 \u2013 Low-Level API and Interactive Training: The third demo 00:33:10 introduces Foundry\u2019s upcoming interactive training API\u2014a low-level interface granting data scientists direct control over algorithms without managing GPU infrastructure.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/2e2fd0b4-5960-4c31-b9d2-946486fbbe5f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/2e2fd0b4-5960-4c31-b9d2-946486fbbe5f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK231"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK232",
+      "title": "Post-Training and Deploying Open Source Reasoning Models in Foundry",
+      "speakers": "Vijay Aski, Manoj Bableshwar, Chris Lauren",
+      "sentence": "Evaluation dashboards reveal how smaller, post-trained models catch up with large proprietary ones in quality while reducing cost.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b7ec6cc5-da1b-46e4-bce5-748e0e07c737",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK232"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK232",
+      "title": "Post-Training and Deploying Open Source Reasoning Models in Foundry",
+      "speakers": "Vijay Aski, Manoj Bableshwar, Chris Lauren",
+      "sentence": "A new API, tentatively called \u201cLoom,\u201d simplifies reinforcement and supervised tuning on CPUs without configuring GPU clusters.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b7ec6cc5-da1b-46e4-bce5-748e0e07c737",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK232"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK233",
+      "title": "Software Defensibility in the era of AI coding",
+      "speakers": "Chip Huyen",
+      "sentence": "The talk closes with excitement about upcoming robotics demonstrations and Chip\u2019s vision of AI-enhanced physical systems still grounded by human purpose and defensible expertise 00:42:36.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/6d282a65-465a-4585-a92b-ca528598b689",
+      "video": "https://medius.microsoft.com/Embed/video-nc/6d282a65-465a-4585-a92b-ca528598b689",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK233"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK241",
+      "title": "From prototype to production: build and run agents at scale",
+      "speakers": "Tina Schuchman, Jeff Hollan, Takuto Higuchi",
+      "sentence": "Introduction and Vision for AI Agents: The video begins with Tina Schackman and Jeff Holland introducing themselves and outlining the session\u2019s purpose\u2014showing how to build, deploy, and operate enterprise-level AI agents using Microsoft Foundry (00:00:00\u201300:00:27).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/af92c987-5029-4a5f-8a59-4a3931941ce5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK241"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK241",
+      "title": "From prototype to production: build and run agents at scale",
+      "speakers": "Tina Schuchman, Jeff Hollan, Takuto Higuchi",
+      "sentence": "The Foundry Toolkit now generally available helps developers integrate tracing, evaluations, and best practices directly in the coding environment (00:09:54\u201300:10:04).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/af92c987-5029-4a5f-8a59-4a3931941ce5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK241"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK241",
+      "title": "From prototype to production: build and run agents at scale",
+      "speakers": "Tina Schuchman, Jeff Hollan, Takuto Higuchi",
+      "sentence": "Deploying and Hosting Enterprise Agents at Scale: Tina follows up announcing production-ready releases: Microsoft Agent Framework v1.0, Foundry Toolkit in VS Code, and upcoming Foundry hosted agents with secure sandbox isolation and long-running support (00:18:02\u201300:19:59).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/af92c987-5029-4a5f-8a59-4a3931941ce5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK241"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK242",
+      "title": "Turn your agents into action: Connect tools, APIs, and documents",
+      "speakers": "Ronak Chokshi, Joe Filcik, Maria Naggaga",
+      "sentence": "In Foundry, she uploads a reusable skill and introduces browser automation \u2014 a new capability for scraping and form filling built on Playwright (00:17:00\u201300:18:06).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e70ca1c3-f52b-4bcb-bc80-6e6afc4f5537",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK242"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK242",
+      "title": "Turn your agents into action: Connect tools, APIs, and documents",
+      "speakers": "Ronak Chokshi, Joe Filcik, Maria Naggaga",
+      "sentence": "Content Understanding and Real-World Applications: Joe Flick takes over, introducing \u201cContent Understanding\u201d as the solution for agents handling complex multimodal content outside APIs such as documents, images, and videos (00:22:31\u201300:23:07).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e70ca1c3-f52b-4bcb-bc80-6e6afc4f5537",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK242"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK242",
+      "title": "Turn your agents into action: Connect tools, APIs, and documents",
+      "speakers": "Ronak Chokshi, Joe Filcik, Maria Naggaga",
+      "sentence": "He introduces \u201cAgentic Mode,\u201d an upcoming July enhancement for reasoning across documents to derive complex answers rather than just extracting values (00:31:01\u201300:33:18).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e70ca1c3-f52b-4bcb-bc80-6e6afc4f5537",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK242"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK243",
+      "title": "Claw and agent harness in Microsoft Foundry",
+      "speakers": "Glenn Condron, Amanda Foster, Shawn Henry",
+      "sentence": "Amanda then introduces a new generation called \u201cAutopilot agents\u201d (00:39:46), which act autonomously with their own user identities, allowing them to send messages, manage documents, and perform independent actions traditionally limited to human accounts.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ce857844-2448-482c-a66b-efa81e214b35",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK243"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK246",
+      "title": "Foundry IQ: Fuel agents with enterprise knowledge and agentic retrieval",
+      "speakers": "Pablo Castro, Allison Sparrow",
+      "sentence": "He transitions to the provisioning process and announces an important milestone\u2014the public preview of the **serverless version of Foundry IQ** (00:09:03).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ae80fe5d-7c1e-4fc5-ab1c-a37839c0a9bd",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK246"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK246",
+      "title": "Foundry IQ: Fuel agents with enterprise knowledge and agentic retrieval",
+      "speakers": "Pablo Castro, Allison Sparrow",
+      "sentence": "This new capability allows developers to create services in 10\u201320 seconds, with auto-scaling and pay-per-use flexibility.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ae80fe5d-7c1e-4fc5-ab1c-a37839c0a9bd",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK246"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK250",
+      "title": "Observe and control agents across any framework with open source tools",
+      "speakers": "Sarah Bird, Sandeep Atluri, Mehrnoosh Sameki, Katelyn Rothney",
+      "sentence": "Future Frontiers and Responsible Collaboration: In closing, Byrd and Sandeep preview upcoming advancements including continuous evaluations powered by reinforcement-learning attackers that adapt tests based on production performance 00:37:03\u201300:39:20.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b919f3dd-95e5-41c4-9ea5-7604e8d87df8",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b919f3dd-95e5-41c4-9ea5-7604e8d87df8",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK250"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK252",
+      "title": "From observability to ROI for AI agents on any framework",
+      "speakers": "Vivek Bhadauria, Sebastian Kohlmeier, Filisha Shah",
+      "sentence": "Multi-Turn Evaluation and Continuous Improvement: The session continues with announcements of advanced public preview features\u2014multi-turn evaluation and user simulation 00:17:48.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/bc75ad49-f354-49ee-a449-69cb12bcf5fb",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK252"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK252",
+      "title": "From observability to ROI for AI agents on any framework",
+      "speakers": "Vivek Bhadauria, Sebastian Kohlmeier, Filisha Shah",
+      "sentence": "Demo 2: Agent Optimization at Scale: Vivek takes the stage to showcase \u201cAgent Optimizer,\u201d a new feature designed for iterative, automated optimization of AI agents based on rubrics and datasets 00:21:01.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/bc75ad49-f354-49ee-a449-69cb12bcf5fb",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK252"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK252",
+      "title": "From observability to ROI for AI agents on any framework",
+      "speakers": "Vivek Bhadauria, Sebastian Kohlmeier, Filisha Shah",
+      "sentence": "The presentation closes with upcoming session invitations and encouragement to explore the Foundry hands-on labs available at Build 00:35:19.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/bc75ad49-f354-49ee-a449-69cb12bcf5fb",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK252"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK260",
+      "title": "Build Apps w\\/ Local AI for Unmetered Intelligence on every Windows PC",
+      "speakers": "Jordi Janer, Aditi Narvekar, Anastasiya Tarnouskaya, Tucker Burns",
+      "sentence": "The narrative promises announcements, live demos across multiple devices, and focuses on Microsoft's vision of \"unmetered intelligence\"\u2014running AI directly on PCs instead of relying exclusively on the cloud 00:01:01\u201300:01:12.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/04c29fa8-c492-43f5-bb90-6582b474053b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/04c29fa8-c492-43f5-bb90-6582b474053b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK260"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK260",
+      "title": "Build Apps w\\/ Local AI for Unmetered Intelligence on every Windows PC",
+      "speakers": "Jordi Janer, Aditi Narvekar, Anastasiya Tarnouskaya, Tucker Burns",
+      "sentence": "Code walkthroughs reveal simplified model download, load, and inference routines for developers.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/04c29fa8-c492-43f5-bb90-6582b474053b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/04c29fa8-c492-43f5-bb90-6582b474053b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK260"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRK260",
+      "title": "Build Apps w\\/ Local AI for Unmetered Intelligence on every Windows PC",
+      "speakers": "Jordi Janer, Aditi Narvekar, Anastasiya Tarnouskaya, Tucker Burns",
+      "sentence": "This leads into a detailed explanation of Windows ML\u2019s general availability and new tooling, notably the Windows ML CLI preview 00:21:28\u201300:27:00, which optimizes models through conversion, analysis, and benchmarking in one workflow.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/04c29fa8-c492-43f5-bb90-6582b474053b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/04c29fa8-c492-43f5-bb90-6582b474053b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK260"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRKSP91",
+      "title": "Turn foundation models into production AI on Microsoft Foundry",
+      "speakers": "Vivek Chauhan, Alicia Frame, Jetashree Ravi",
+      "sentence": "Demo and Foundry Integration Announcement: The next section presents practical demos of Fireworks tools and the major announcement of its availability on Microsoft Foundry (00:14:42).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/1ce61725-4e6d-40e0-902f-a17d1366824a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRKSP91"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "BRKSP94",
+      "title": "Orchestrate special agents with NVIDIA Nemotron models on Foundry",
+      "speakers": "Joey Conway, AYSEN Ilkbahar, Stephen McCullough",
+      "sentence": "Announced recently, Nemotron 3 Ultra integrates advanced training techniques like multi-teacher distillation (00:09:08) and new NVFP4 precision formats for NVIDIA Blackwell architecture, allowing one unified checkpoint for device compatibility.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/6c7fb279-6292-41b9-8bf5-5d5b12d9eb25",
+      "video": "https://medius.microsoft.com/Embed/video-nc/6c7fb279-6292-41b9-8bf5-5d5b12d9eb25",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRKSP94"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM310",
+      "title": "Ship code faster with AI-powered NoSQL schema design",
+      "speakers": "Marko Hotti, Sergiy Smyrnov",
+      "sentence": "Marco and Sergei are introduced as the speakers who will discuss how to ship code faster using AI-powered NoSQL schema design.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/43d42b09-edf5-442a-8016-5661a369e0f1",
+      "video": "https://medius.microsoft.com/Embed/video-nc/43d42b09-edf5-442a-8016-5661a369e0f1",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM310"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM312",
+      "title": "Multi-agents in action with 3 AI agents, 3 frameworks, tools & models",
+      "speakers": "Jan Kalis, Vini Soto",
+      "sentence": "Introducing Azure Container App Sandboxes: The speakers discuss typical runtime problems\u2014like cold starts, untrusted code execution, and lack of lifecycle control\u2014and introduce Azure Container App Sandboxes as a solution (00:02:28\u201300:02:56).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/d23cefd0-8854-4932-a055-1022d8c5aa15",
+      "video": "https://medius.microsoft.com/Embed/video-nc/d23cefd0-8854-4932-a055-1022d8c5aa15",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM312"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM312",
+      "title": "Multi-agents in action with 3 AI agents, 3 frameworks, tools & models",
+      "speakers": "Jan Kalis, Vini Soto",
+      "sentence": "They announce a private preview of this feature, emphasizing its secure, isolated, and stateful infrastructure on demand.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/d23cefd0-8854-4932-a055-1022d8c5aa15",
+      "video": "https://medius.microsoft.com/Embed/video-nc/d23cefd0-8854-4932-a055-1022d8c5aa15",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM312"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM312",
+      "title": "Multi-agents in action with 3 AI agents, 3 frameworks, tools & models",
+      "speakers": "Jan Kalis, Vini Soto",
+      "sentence": "The presenters close with an invitation to upcoming sessions and demos at Build, thanking the audience for participating and reiterating Microsoft\u2019s mission to make multi-agent orchestration secure, manageable, and developer-friendly.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/d23cefd0-8854-4932-a055-1022d8c5aa15",
+      "video": "https://medius.microsoft.com/Embed/video-nc/d23cefd0-8854-4932-a055-1022d8c5aa15",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM312"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM323",
+      "title": "Under the hood of Microsoft AI models",
+      "speakers": "Dave Citron",
+      "sentence": "Conclusion and Availability: In closing at 00:16:48, Citron summarizes that Image 2.5, Voice 2, and Transcribe 1.5 are live today on Foundry and Microsoft\u2019s Mai Playground, accessible even through mobile devices, while Thinking 1 is entering private preview through Foundry. \"Code 1 Flash\" is available in Visual Studio Code.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/737e6687-341c-48f1-955a-62f5f84e88a1",
+      "video": "https://medius.microsoft.com/Embed/video-nc/737e6687-341c-48f1-955a-62f5f84e88a1",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM323"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM331",
+      "title": "Turn APIs, tools, and data into real agent velocity",
+      "speakers": "Chu Lahlou",
+      "sentence": "To address these challenges, the concept of \u201ccontent understanding\u201d is introduced as a method to transform messy, multimodal inputs into clean, structured outputs (00:01:47\u201300:02:13), formatted as Markdown or JSON containing agent-ready inputs.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/f08b2f52-65fb-4621-90fd-7813993f93ca",
+      "video": "https://medius.microsoft.com/Embed/video-nc/f08b2f52-65fb-4621-90fd-7813993f93ca",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM331"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM331",
+      "title": "Turn APIs, tools, and data into real agent velocity",
+      "speakers": "Chu Lahlou",
+      "sentence": "The video closes by inviting viewers to explore full demo code on GitHub and attend a related breakout session on upcoming advancements like Generative Tech Mode and Foundry integration (00:21:19\u201300:21:47).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/f08b2f52-65fb-4621-90fd-7813993f93ca",
+      "video": "https://medius.microsoft.com/Embed/video-nc/f08b2f52-65fb-4621-90fd-7813993f93ca",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM331"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM333",
+      "title": "How Foundry integrates with open-source frameworks and tools",
+      "speakers": "Nagkumar Arkalgud, Facundo Santiago",
+      "sentence": "Introducing Skills and Web Interaction: The conversation shifts to enhancing agent intelligence using \u201cskills\u201d \u2014 reusable playbooks defining sequences of actions like inbox triage (00:04:38).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/60554504-db91-4d72-a3de-4f1c346b7ceb",
+      "video": "https://medius.microsoft.com/Embed/video-nc/60554504-db91-4d72-a3de-4f1c346b7ceb",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM333"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM333",
+      "title": "How Foundry integrates with open-source frameworks and tools",
+      "speakers": "Nagkumar Arkalgud, Facundo Santiago",
+      "sentence": "Demonstrations reveal trace replays showing user input, tool actions, and token costs across the workflow.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/60554504-db91-4d72-a3de-4f1c346b7ceb",
+      "video": "https://medius.microsoft.com/Embed/video-nc/60554504-db91-4d72-a3de-4f1c346b7ceb",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM333"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM340",
+      "title": "Build work-ready agents with Foundry + Work IQ, govern with Agent 365",
+      "speakers": "Srikumar (Sri) Nair",
+      "sentence": "He announces general availability targeting mid-June 00:03:11, promising full security compliance so agents only see appropriate data per identity permissions.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4ce5f64d-3565-4d14-8010-32ad80dc7524",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4ce5f64d-3565-4d14-8010-32ad80dc7524",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM340"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM341",
+      "title": "Any agent, any cloud: Standardized tracing with Foundry+OpenTelemetry",
+      "speakers": "Nagkumar Arkalgud, Hanchi Wang",
+      "sentence": "This establishes how Foundry\u2019s observability reveals agent reasoning and behavior step by step.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/f1e85c0c-4927-4179-bf56-f6ec097af7dc",
+      "video": "https://medius.microsoft.com/Embed/video-nc/f1e85c0c-4927-4179-bf56-f6ec097af7dc",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM341"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM345",
+      "title": "From prompt to app, build AI powered apps on Windows",
+      "speakers": "Nikola Metulev, Lei Xu",
+      "sentence": "Optimizing AI Models with WinML: Around 00:09:38, the presenters unveil a newly released tool \u2014 WinML CLI.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/851eb058-a594-4193-8437-6010e4400b02",
+      "video": "https://medius.microsoft.com/Embed/video-nc/851eb058-a594-4193-8437-6010e4400b02",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM345"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM361",
+      "title": "Understand and fix Agent Framework apps with observability and evals",
+      "speakers": "Jim Bennett",
+      "sentence": "Through Phoenix, he shows how evals produce simple deterministic scores (supported/unsupported) and reveals that his agent is only correct around half the time.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/65ab30d5-8261-422e-8be7-119ad843b8ee",
+      "video": "https://medius.microsoft.com/Embed/video-nc/65ab30d5-8261-422e-8be7-119ad843b8ee",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM361"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM362-R1",
+      "title": "Building a Multi-Agent Workflow in Microsoft Fabric",
+      "speakers": "Alexander Wachtel",
+      "sentence": "Agent SDK, Evaluation, and Governance: Alex moves deeper into technical territory by introducing the Data Agent SDK 00:19:45\u201300:21:01.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/d48b1a04-b191-438e-963b-2b3b03577cb6",
+      "video": "https://medius.microsoft.com/Embed/video-nc/d48b1a04-b191-438e-963b-2b3b03577cb6",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM362-R1"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEM368-R1",
+      "title": "Data Science & Machine Learning with Microsoft Fabric",
+      "speakers": "Prashant G Bhoyar",
+      "sentence": "Introducing Fabric Data Agents: The next section shifts focus to Fabric\u2019s data agent capabilities\u2014a generative AI-powered feature that lets everyday users query their data intuitively without complex SQL writing (00:14:49).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4924e612-6605-49b7-9f01-7b9fab96e6e7",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4924e612-6605-49b7-9f01-7b9fab96e6e7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM368-R1"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEMSP380",
+      "title": "Build automated agents using optimized AI Foundry models on Snapdragon",
+      "speakers": "Darren Oberst, Meghana Rao, Morris Novello",
+      "sentence": "Introduction and Motivation: At the start of the session 00:00:01\u201300:00:13, the presenters introduce the goal of demonstrating how to build automated AI agents using optimized models available in Microsoft Foundry for Snapdragon PCs.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/5598fc68-e815-4c2e-b5fc-b9bd4ad90c22",
+      "video": "https://medius.microsoft.com/Embed/video-nc/5598fc68-e815-4c2e-b5fc-b9bd4ad90c22",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP380"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEMSP383",
+      "title": "Move AI workflows from test to production on Microsoft Foundry",
+      "speakers": "Vignesh Sridhar",
+      "sentence": "The session ends with Manesh expressing gratitude for the presentation and sharing a brief announcement about the next upcoming session, encouraging participants to stay or have a great day 00:13:58\u201300:14:26.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/2d0d8c96-5737-41f7-8a54-7be68b88101f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/2d0d8c96-5737-41f7-8a54-7be68b88101f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP383"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEMSP388",
+      "title": "Ship faster with Claude Code and Cowork in Microsoft Foundry",
+      "speakers": "Caroline Matthews, Ryan Whitehead",
+      "sentence": "Caroline then announces the recent model release, Opus 4.8, describing it as Anthropic\u2019s most advanced Frontier Intelligence offering ideal for accuracy-critical, long-horizon tasks 00:02:12.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/46e9fb81-4bb9-4d1c-a5e4-ca32bd1bb8ff",
+      "video": "https://medius.microsoft.com/Embed/video-nc/46e9fb81-4bb9-4d1c-a5e4-ca32bd1bb8ff",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP388"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEMSP388",
+      "title": "Ship faster with Claude Code and Cowork in Microsoft Foundry",
+      "speakers": "Caroline Matthews, Ryan Whitehead",
+      "sentence": "She introduces \u201cdynamic workflows,\u201d a new feature in Opus 4.8 enabling modular, sub-agent collaboration.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/46e9fb81-4bb9-4d1c-a5e4-ca32bd1bb8ff",
+      "video": "https://medius.microsoft.com/Embed/video-nc/46e9fb81-4bb9-4d1c-a5e4-ca32bd1bb8ff",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP388"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEMSP388",
+      "title": "Ship faster with Claude Code and Cowork in Microsoft Foundry",
+      "speakers": "Caroline Matthews, Ryan Whitehead",
+      "sentence": "First Frontier \u2013 Autonomy and Safety: Caroline discusses reducing human bottlenecks by introducing auto mode, a new classifier-based safety layer between model requests and execution permissions 00:06:35.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/46e9fb81-4bb9-4d1c-a5e4-ca32bd1bb8ff",
+      "video": "https://medius.microsoft.com/Embed/video-nc/46e9fb81-4bb9-4d1c-a5e4-ca32bd1bb8ff",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP388"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEMSP390",
+      "title": "Create multimodal AI agents with persistent memory",
+      "speakers": "Edo Segal",
+      "sentence": "Later, Microsoft\u2019s representative joins to announce Napster\u2019s public preview as a native Azure offering 00:04:38\u201300:05:05.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9228bcee-53b2-4fd0-b6a7-83ca65070cfd",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9228bcee-53b2-4fd0-b6a7-83ca65070cfd",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP390"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "DEMSP393",
+      "title": "Orchestrate omnichannel AI agents with Foundry and Twilio",
+      "speakers": "Rachel Baskin",
+      "sentence": "To solve scalability and security isolation issues, Microsoft introduced \u201chosted agents,\u201d a new compute model built for persistent, secure, stateful sessions 00:05:22.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/c1269a04-04cc-4d61-b461-41f96f288bac",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c1269a04-04cc-4d61-b461-41f96f288bac",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP393"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "KEY01",
+      "title": "Microsoft Build opening keynote",
+      "speakers": "Satya Nadella",
+      "sentence": "Developers are introduced to the Surface RTX Spark Dev Box at 00:08:06, a machine delivering petaflop-level AI compute designed specifically for software creation.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9b6fd85d-e64f-46a4-b8b2-23811087192f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9b6fd85d-e64f-46a4-b8b2-23811087192f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/KEY01"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "KEY01",
+      "title": "Microsoft Build opening keynote",
+      "speakers": "Satya Nadella",
+      "sentence": "He unveils innovations like the AMD MI300 and the custom ARM-based Cobalt CPUs and networks designed for the dominant AI workloads: training, inference, and agent runtime.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9b6fd85d-e64f-46a4-b8b2-23811087192f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9b6fd85d-e64f-46a4-b8b2-23811087192f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/KEY01"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "KEY01",
+      "title": "Microsoft Build opening keynote",
+      "speakers": "Satya Nadella",
+      "sentence": "Stevie Bathiche and team reveal this as the platform for new \"agent-first\" computing\u2014an ecosystem that connects specialized devices through Azure.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9b6fd85d-e64f-46a4-b8b2-23811087192f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9b6fd85d-e64f-46a4-b8b2-23811087192f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/KEY01"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "KEY01",
+      "title": "Microsoft Build opening keynote",
+      "speakers": "Satya Nadella",
+      "sentence": "The keynote concludes with the unveiling of the Majorana 2 quantum chip at 02:19:04, achieving breakthrough reliability and density for the coming quantum era.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9b6fd85d-e64f-46a4-b8b2-23811087192f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9b6fd85d-e64f-46a4-b8b2-23811087192f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/KEY01"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVE142",
+      "title": "Student to Startup",
+      "speakers": "Alycea Adams, Tom Davis",
+      "sentence": "User Insights and Future Vision: In the final section, 00:09:09\u201300:13:13, Alicia reveals that her expected audience of young individual users evolved into mothers seeking solutions for their daughters\u2019 hair.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b2a624c7-5cb0-4a3d-b252-274a14cef87e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b2a624c7-5cb0-4a3d-b252-274a14cef87e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE142"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVE143",
+      "title": "What\u2019s New in Azure Data: HorizonDB and Rayfin",
+      "speakers": "Charles Feddersen, Sachin Patney, Nikisha Reyes-Grange",
+      "sentence": "Charles, the Director of Program Management for Postgres and MySQL on Azure, and Sachin, the General Manager of App Development for Azure Data, join to share key data announcements made at Build.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e6e02047-ba96-4845-9f56-11be582215ec",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e6e02047-ba96-4845-9f56-11be582215ec",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE143"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVE143",
+      "title": "What\u2019s New in Azure Data: HorizonDB and Rayfin",
+      "speakers": "Charles Feddersen, Sachin Patney, Nikisha Reyes-Grange",
+      "sentence": "Azure Horizon DB Announcement: Charles explains that Azure Horizon DB is a newly announced Postgres-based database service designed for developers and enterprises 00:00:45.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e6e02047-ba96-4845-9f56-11be582215ec",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e6e02047-ba96-4845-9f56-11be582215ec",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE143"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVE143",
+      "title": "What\u2019s New in Azure Data: HorizonDB and Rayfin",
+      "speakers": "Charles Feddersen, Sachin Patney, Nikisha Reyes-Grange",
+      "sentence": "Microsoft is among the largest contributors to the upstream Postgres project, modifying roughly 8% of the codebase in the upcoming version 19 00:09:03.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e6e02047-ba96-4845-9f56-11be582215ec",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e6e02047-ba96-4845-9f56-11be582215ec",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE143"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVE159",
+      "title": "Behind the Scenes: Accelerating the AI Agent DevOps Lifecycle with End-to-End Observability",
+      "speakers": "Vivek Bhadauria, Nitya Narasimhan, Filisha Shah",
+      "sentence": "The panel notes that \u201cAgent Optimizer\u201d is currently in gated preview and will soon be available in public preview 00:05:49\u201300:05:57, inviting developers to try it and provide feedback.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/47bd4df9-ea64-49d9-bd10-d4e2f5baefcc",
+      "video": "https://medius.microsoft.com/Embed/video-nc/47bd4df9-ea64-49d9-bd10-d4e2f5baefcc",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE159"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVE163",
+      "title": "Toolboxes in Foundry: Build, Search and Govern Your Tools",
+      "speakers": "Atul Aggarwal, Seth Juarez, Linda Li",
+      "sentence": "Linda announces that Toolbox is currently in public preview and will achieve general availability later this month 00:13:17\u201300:13:34.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ad613b19-51cf-4c92-a4c5-cae4670df3ae",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ad613b19-51cf-4c92-a4c5-cae4670df3ae",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE163"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVE171",
+      "title": "The Three IQs: Ground Your Agents in Knowledge, Data, and Work",
+      "speakers": "Ayca Bas, Marco Casalaina",
+      "sentence": "Preventing Context Redundancy and Introducing Agent Templates: The next section discusses how IQs help reduce \u201ccontext rot,\u201d meaning developers no longer need to overload agents with excessive contextual data (00:05:00\u201300:05:17).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/eaaffcc3-d8a7-47ab-a42c-d84a91d007e7",
+      "video": "https://medius.microsoft.com/Embed/video-nc/eaaffcc3-d8a7-47ab-a42c-d84a91d007e7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE171"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVESP122",
+      "title": "Intel quick take: Live from Microsoft Build",
+      "speakers": "Bryan Hiestand",
+      "sentence": "The host enthusiastically announces a special guest from NVIDIA, Steven, who will be sharing details about innovative projects his team has been developing.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ac4e728e-13e3-415e-bae4-1e118bc96b6a",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ac4e728e-13e3-415e-bae4-1e118bc96b6a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVESP122"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVESP122",
+      "title": "Intel quick take: Live from Microsoft Build",
+      "speakers": "Bryan Hiestand",
+      "sentence": "Highlighting the Technological Innovations: The host responds with enthusiasm about the upcoming demonstration, emphasizing the value of seeing technology in action 00:00:57.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ac4e728e-13e3-415e-bae4-1e118bc96b6a",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ac4e728e-13e3-415e-bae4-1e118bc96b6a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVESP122"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVESP123",
+      "title": "NVIDIA quick take: Live from Microsoft Build",
+      "speakers": "Stephen McCullough",
+      "sentence": "The host enthusiastically announces a special guest from NVIDIA, Steven, who will be sharing details about innovative projects his team has been developing.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/c4d84be5-ddcd-494b-9489-a35eb76b26ed",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c4d84be5-ddcd-494b-9489-a35eb76b26ed",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVESP123"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVESP123",
+      "title": "NVIDIA quick take: Live from Microsoft Build",
+      "speakers": "Stephen McCullough",
+      "sentence": "Highlighting the Technological Innovations: The host responds with enthusiasm about the upcoming demonstration, emphasizing the value of seeing technology in action 00:00:57.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/c4d84be5-ddcd-494b-9489-a35eb76b26ed",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c4d84be5-ddcd-494b-9489-a35eb76b26ed",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVESP123"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "LIVESP129",
+      "title": "Organizational intelligence in action \u2014 with Anthropic",
+      "speakers": "Max Kirby",
+      "sentence": "This section transitions into discussions about Microsoft\u2019s new \u201cIQ\u201d announcements\u2014Work IQ, Foundry IQ, Fabric IQ, and Web IQ\u2014which enable reasoning across multiple domains 00:02:10\u201300:02:21.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8a1f6f67-1328-4be4-8a17-c0fff1c551ce",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8a1f6f67-1328-4be4-8a17-c0fff1c551ce",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVESP129"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "OD805",
+      "title": "AI Building Blocks for .NET: Add intelligence to your C# apps",
+      "speakers": "",
+      "sentence": "He introduces Aspire traces to monitor service interactions and sets the context for the upcoming deep dive into the .NET AI architecture.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/77f11a3c-9f3d-4ac6-9ea4-fef86c97f73a",
+      "video": "https://medius.microsoft.com/Embed/video-nc/77f11a3c-9f3d-4ac6-9ea4-fef86c97f73a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD805"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "OD805",
+      "title": "AI Building Blocks for .NET: Add intelligence to your C# apps",
+      "speakers": "",
+      "sentence": "Integrating External Tools with MCP: Bruno transitions to introducing the Model Context Protocol (MCP), a standard enabling AI applications to access external tools and APIs 00:23:01.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/77f11a3c-9f3d-4ac6-9ea4-fef86c97f73a",
+      "video": "https://medius.microsoft.com/Embed/video-nc/77f11a3c-9f3d-4ac6-9ea4-fef86c97f73a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD805"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "OD811",
+      "title": "Powering the next AI frontier with a unified data platform",
+      "speakers": "Amir Netz, Eren Orbey",
+      "sentence": "By 00:07:09, he announces new data connectors for SAP, Oracle, SharePoint, OneDrive, and previews for AWS Glue and Azure Monitor, reinforcing a \u201czero-ETL\u201d approach for complete data unification.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4b833a99-c06b-4edf-b6a8-5063fc488c92",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4b833a99-c06b-4edf-b6a8-5063fc488c92",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD811"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "OD811",
+      "title": "Powering the next AI frontier with a unified data platform",
+      "speakers": "Amir Netz, Eren Orbey",
+      "sentence": "Performance, Agent Skills, and AI Functions: Starting at 00:08:08, Amir unveils GPU-accelerated query performance in the Fabric Data Warehouse, achieving up to 8x to 100x improvements under concurrent workloads \u2014 a breakthrough showcased in multiple demos.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4b833a99-c06b-4edf-b6a8-5063fc488c92",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4b833a99-c06b-4edf-b6a8-5063fc488c92",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD811"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "OD811",
+      "title": "Powering the next AI frontier with a unified data platform",
+      "speakers": "Amir Netz, Eren Orbey",
+      "sentence": "This naturally leads to the announcement of the general availability of \u201cPlanning in Fabric\u201d at 00:22:00.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4b833a99-c06b-4edf-b6a8-5063fc488c92",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4b833a99-c06b-4edf-b6a8-5063fc488c92",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD811"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "OD811",
+      "title": "Powering the next AI frontier with a unified data platform",
+      "speakers": "Amir Netz, Eren Orbey",
+      "sentence": "Finally, the narration transitions at 00:33:05 to \u201coperations agents,\u201d now generally available.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4b833a99-c06b-4edf-b6a8-5063fc488c92",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4b833a99-c06b-4edf-b6a8-5063fc488c92",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD811"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "ODSP909",
+      "title": "Take AI agents from prototype to production with OpenTelemetry",
+      "speakers": "Harry Kimpel",
+      "sentence": "Built-in telemetry reveals \u201cwhat\u201d happened but not \u201cwhy,\u201d prompting the addition of custom spans and metrics for enriched context (00:07:55).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/05becd32-00b0-410e-adb0-4dc892dbde19",
+      "video": "https://medius.microsoft.com/Embed/video-nc/05becd32-00b0-410e-adb0-4dc892dbde19",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP909"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "ODSP922",
+      "title": "Develop a conversational search experience without rebuilding your app",
+      "speakers": "Greg Crist",
+      "sentence": "Overview of Elastic Solutions: Jonathan Simon begins his portion at 00:02:04 by introducing himself and the structure of his presentation, which includes an overview, demo, and architectural walkthrough.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/107cd1bc-d7fd-428c-8a8c-fa58870c3a9a",
+      "video": "https://medius.microsoft.com/Embed/video-nc/107cd1bc-d7fd-428c-8a8c-fa58870c3a9a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP922"
+    },
+    {
+      "topic": "AI Foundry",
+      "code": "ODSP922",
+      "title": "Develop a conversational search experience without rebuilding your app",
+      "speakers": "Greg Crist",
+      "sentence": "He then officially announces the general availability of Elastic Agent Builder at 00:04:55, marking its transition from technical preview to production-ready status.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/107cd1bc-d7fd-428c-8a8c-fa58870c3a9a",
+      "video": "https://medius.microsoft.com/Embed/video-nc/107cd1bc-d7fd-428c-8a8c-fa58870c3a9a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP922"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK206-R1",
+      "title": "Your agent, anywhere: MultiClient, MultiDevice with GitHub Copilot SDK",
+      "speakers": "Patrick Nikoletich, Steve Sanderson",
+      "sentence": "Patrick outlines that they will discuss how to build and deploy with the SDK, touch on upcoming features, and share follow-up resources.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/77be1034-59af-4388-bdb6-37a99f2acae7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK206-R1"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK206-R1",
+      "title": "Your agent, anywhere: MultiClient, MultiDevice with GitHub Copilot SDK",
+      "speakers": "Patrick Nikoletich, Steve Sanderson",
+      "sentence": "He announces that the GitHub Copilot SDK has reached its General Availability milestone at version 1.0 (00:00:32\u201300:00:38), marking the end of a year-long journey from technical preview to official release.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/77be1034-59af-4388-bdb6-37a99f2acae7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK206-R1"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK206-R1",
+      "title": "Your agent, anywhere: MultiClient, MultiDevice with GitHub Copilot SDK",
+      "speakers": "Patrick Nikoletich, Steve Sanderson",
+      "sentence": "This shared \u201charness\u201d ensures that experiences remain consistent across GitHub and Microsoft\u2019s broader ecosystem, introducing a uniform Copilot feel across different products.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/77be1034-59af-4388-bdb6-37a99f2acae7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK206-R1"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK226",
+      "title": "Inside Azure innovations with Mark Russinovich",
+      "speakers": "Mark Russinovich, Darby Kosten",
+      "sentence": "Azure Boost is then introduced as a central innovation\u2014it uses offload cards to move data paths for storage and networking from CPUs to dedicated DPUs, boosting throughput significantly.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e959dc6a-bb39-46a9-84c5-b2620675b658",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK226"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK234",
+      "title": "Shipping custom models at scale from fine-tuning to inference",
+      "speakers": "Rob Ferguson, Daniel Han, Mark Saroufin",
+      "sentence": "Rob describes how elegant RL training recipes differ dramatically from actual infrastructure needs, emphasizing that math abstractions often reveal themselves as large GPU production costs.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/990ffabd-eceb-4850-96a4-e40c4c2e7df8",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK234"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK235",
+      "title": "Local models, developer control, and the future of AI runtimes",
+      "speakers": "Michael Chiang, Parth Sareen",
+      "sentence": "He notes partnerships with major model and hardware providers and announces that DeepMind\u2019s new Jemma 4-12B unified model is already hosted and available on the O Llama platform (00:02:06\u201300:02:18).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/0f29bea1-6955-4ec3-8c51-5a80b47dcf7b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK235"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK235",
+      "title": "Local models, developer control, and the future of AI runtimes",
+      "speakers": "Michael Chiang, Parth Sareen",
+      "sentence": "Upcoming hardware trends toward unified memory from NVIDIA, AMD, and Microsoft will further improve performance and model capacity (00:16:00\u201300:17:15).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/0f29bea1-6955-4ec3-8c51-5a80b47dcf7b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK235"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK244",
+      "title": "Agent supervision is the new senior engineering skill",
+      "speakers": "swyx (Shawn Wang)",
+      "sentence": "He then transitions to upcoming AI research priorities (00:30:29): real-time responsiveness, memory and continual learning, and interactive micro-batching aimed at human-machine \u201cmind melds.\u201d This vision includes video generation driven by orchestrating agents and the rise of world models capable of predicting user preferences and intentions.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c8e844ff-d07c-427f-9168-2a7d84ac4acf",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK244"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK262",
+      "title": "Building Agents You Can Trust on Windows",
+      "speakers": "Kirupa Chinnathambi, Patrick Nikoletich, Stuart Schaefer",
+      "sentence": "He reveals how users can toggle protection, customize network filters, and observe sandbox restrictions while maintaining developer flexibility across CLI, SDK, and integrated apps.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ceeb5203-d352-4d45-8be6-9db57724f003",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ceeb5203-d352-4d45-8be6-9db57724f003",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK262"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRK262",
+      "title": "Building Agents You Can Trust on Windows",
+      "speakers": "Kirupa Chinnathambi, Patrick Nikoletich, Stuart Schaefer",
+      "sentence": "She introduces the upcoming integration with Agent 365 built over MXC, which supports enterprise-grade protections through Defender, Entra, and Intune 00:27:27\u201300:27:50.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ceeb5203-d352-4d45-8be6-9db57724f003",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ceeb5203-d352-4d45-8be6-9db57724f003",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK262"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "BRKSP90",
+      "title": "Stop routing docstrings to 70B models with on-device AI on Snapdragon",
+      "speakers": "Alberto Martinez, Morris Novello",
+      "sentence": "Introducing himself as the head of software strategy for Qualcomm\u2019s compute business, he explains that his talk will be somewhat improvised, fitting for the creative \u201cimprov\u201d venue (00:00:23).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/77723cdd-4ddd-4ede-8582-8ec8771be197",
+      "video": "https://medius.microsoft.com/Embed/video-nc/77723cdd-4ddd-4ede-8582-8ec8771be197",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRKSP90"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEM346",
+      "title": "WSL improvements and the new Containers CLI and APIs",
+      "speakers": "Craig Loewen, Pooja Trivedi",
+      "sentence": "Introduction and Key Announcements: The session begins with Pooja Trivedi and Craig introducing themselves and unveiling a new capability known as WSL Containers (00:00:20).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4025f713-c725-4c66-a946-2ab72f10c1ad",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4025f713-c725-4c66-a946-2ab72f10c1ad",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM346"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEM346",
+      "title": "WSL improvements and the new Containers CLI and APIs",
+      "speakers": "Craig Loewen, Pooja Trivedi",
+      "sentence": "CLI Demonstration and Basic Container Operations: Pooja demonstrates how WSL Containers can be accessed and managed using a new tool called WSLC, available after a simple WSL update (00:01:33).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4025f713-c725-4c66-a946-2ab72f10c1ad",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4025f713-c725-4c66-a946-2ab72f10c1ad",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM346"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEM346",
+      "title": "WSL improvements and the new Containers CLI and APIs",
+      "speakers": "Craig Loewen, Pooja Trivedi",
+      "sentence": "Before closing, she mentions additional updates including Azure Linux 4.0\u2019s availability and its upcoming inclusion as a WSL distribution (00:21:52).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4025f713-c725-4c66-a946-2ab72f10c1ad",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4025f713-c725-4c66-a946-2ab72f10c1ad",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM346"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEMSP381",
+      "title": "Scale agentic AI cost\u2011efficiently on Azure with Arm Cobalt VMs",
+      "speakers": "Gova Babu, Pranay Bakre, Sameer Nori",
+      "sentence": "Goa announces that Cobalt 200 VMs, built on 3nm ARM architecture and optimized for Microsoft workloads, now ship with Azure Boost and achieve around 50% better per-core performance compared to the previous generation (00:03:35\u201300:04:12).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/2796f78a-ca86-49c1-98cc-ba57308ea186",
+      "video": "https://medius.microsoft.com/Embed/video-nc/2796f78a-ca86-49c1-98cc-ba57308ea186",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP381"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEMSP381",
+      "title": "Scale agentic AI cost\u2011efficiently on Azure with Arm Cobalt VMs",
+      "speakers": "Gova Babu, Pranay Bakre, Sameer Nori",
+      "sentence": "The VMs are now available in preview across eight regions, with more expansion planned upon general availability (00:06:33\u201300:06:46).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/2796f78a-ca86-49c1-98cc-ba57308ea186",
+      "video": "https://medius.microsoft.com/Embed/video-nc/2796f78a-ca86-49c1-98cc-ba57308ea186",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP381"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEMSP381",
+      "title": "Scale agentic AI cost\u2011efficiently on Azure with Arm Cobalt VMs",
+      "speakers": "Gova Babu, Pranay Bakre, Sameer Nori",
+      "sentence": "He highlights upcoming hands-on lab sessions and invites participants to explore ARM Cloud Migration resources, which assist in transitioning workloads to ARM64 with performance analysis and engineering support (00:16:02\u201300:16:38).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/2796f78a-ca86-49c1-98cc-ba57308ea186",
+      "video": "https://medius.microsoft.com/Embed/video-nc/2796f78a-ca86-49c1-98cc-ba57308ea186",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP381"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEMSP384",
+      "title": "Profile and optimize agentic AI on Windows",
+      "speakers": "Freddy Chiu, Vasanth Tovinkere",
+      "sentence": "The segue to profiling is introduced by posing the challenge of measuring performance to optimize such multi-step, multimodal workflows 00:02:55\u201300:03:06.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/181d1850-faaf-4f02-b3ce-293fa47f1b5f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/181d1850-faaf-4f02-b3ce-293fa47f1b5f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP384"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEMSP384",
+      "title": "Profile and optimize agentic AI on Windows",
+      "speakers": "Freddy Chiu, Vasanth Tovinkere",
+      "sentence": "The results reveal trade-offs between speed and power consumption, allowing informed workload deployment strategies.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/181d1850-faaf-4f02-b3ce-293fa47f1b5f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/181d1850-faaf-4f02-b3ce-293fa47f1b5f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP384"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEMSP386",
+      "title": "Develop faster on Windows with AI playbooks and local agents",
+      "speakers": "Adrian Macias",
+      "sentence": "The speaker highlights developer enthusiasm\u2014mentioning community projects and cross-vendor contributions\u2014and reveals the upcoming \u201cHalo box,\u201d a headless PC appliance designed for continuous AI agent operation and background automation tasks 00:23:26\u201300:24:22.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/3e9502fa-d5ca-49a3-a3bb-69d4be31d73f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/3e9502fa-d5ca-49a3-a3bb-69d4be31d73f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP386"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEMSP386",
+      "title": "Develop faster on Windows with AI playbooks and local agents",
+      "speakers": "Adrian Macias",
+      "sentence": "Conclusion and Call to Action: The session closes with an invitation to explore AMD\u2019s Developer Portal (00:24:26\u201300:25:26), where visitors will find announcements on Halo, Lemonade updates, and Playbook workshops.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/3e9502fa-d5ca-49a3-a3bb-69d4be31d73f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/3e9502fa-d5ca-49a3-a3bb-69d4be31d73f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP386"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "DEMSP387",
+      "title": "Secure agent workflows in GitHub Copilot with NVIDIA OpenShell",
+      "speakers": "Ali Golshan, Alex Watson",
+      "sentence": "The speakers invite community testing and contributions, noting that the alpha version debuted at GTC in March and will advance to beta soon.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b73f26f9-8342-4119-b417-82d0136435b9",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b73f26f9-8342-4119-b417-82d0136435b9",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP387"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE109",
+      "title": "What\u2019s real, ready, and next for developers with Scott Guthrie",
+      "speakers": "Scott Guthrie, Seth Juarez",
+      "sentence": "Fabric IQ\u2014now generally available\u2014connects semantic data directly to Copilot in Microsoft 365 for more intelligent organizational insights (00:09:40\u201300:10:11).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/66e36077-6ee0-4e48-a7e4-c206c235379b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/66e36077-6ee0-4e48-a7e4-c206c235379b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE109"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE109",
+      "title": "What\u2019s real, ready, and next for developers with Scott Guthrie",
+      "speakers": "Scott Guthrie, Seth Juarez",
+      "sentence": "As AI agents and automated systems introduce millions of requests per second, the architecture must evolve beyond conventional relational designs to globally replicated systems capable of ultra-low latency.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/66e36077-6ee0-4e48-a7e4-c206c235379b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/66e36077-6ee0-4e48-a7e4-c206c235379b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE109"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE109",
+      "title": "What\u2019s real, ready, and next for developers with Scott Guthrie",
+      "speakers": "Scott Guthrie, Seth Juarez",
+      "sentence": "The video concludes as Seth thanks Guthrie, who confirms that the upcoming AI-driven transformation will be vast and exhilarating for developers and technologists alike (00:14:16\u201300:14:22).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/66e36077-6ee0-4e48-a7e4-c206c235379b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/66e36077-6ee0-4e48-a7e4-c206c235379b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE109"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE148",
+      "title": "How Xoople Scales Python for AI using Anyscale on Azure",
+      "speakers": "Milos Colic, Nate Waters",
+      "sentence": "Technical Implementation with AnyScale on Azure: Nate transitions to discuss Microsoft\u2019s new announcement\u2014\u201cAnyScale on Azure\u201d (00:02:56).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/20919845-b4f7-4ac7-ad3f-4a954711c3b5",
+      "video": "https://medius.microsoft.com/Embed/video-nc/20919845-b4f7-4ac7-ad3f-4a954711c3b5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE148"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE148",
+      "title": "How Xoople Scales Python for AI using Anyscale on Azure",
+      "speakers": "Milos Colic, Nate Waters",
+      "sentence": "The conversation concludes with Nate thanking Milos for joining Microsoft Build and encouraging viewers to explore AnyScale on Azure, which is now available in public preview (00:14:06).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/20919845-b4f7-4ac7-ad3f-4a954711c3b5",
+      "video": "https://medius.microsoft.com/Embed/video-nc/20919845-b4f7-4ac7-ad3f-4a954711c3b5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE148"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE158",
+      "title": "How Microsoft AI builds coding models optimized for GitHub Copilot",
+      "speakers": "Pierce Boggan, Pengcheng He, Seth Juarez, Yang Liu",
+      "sentence": "Users are encouraged to provide feedback to refine future \u201cpowerful beasts.\u201d The host concludes enthusiastically, thanking the team and urging developers to stay tuned for upcoming iterations, applauding the innovation that merges efficiency, intelligence, and practical coding application.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/0a23b038-c73a-4b01-901d-9098e033af9a",
+      "video": "https://medius.microsoft.com/Embed/video-nc/0a23b038-c73a-4b01-901d-9098e033af9a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE158"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE165",
+      "title": "Is DOOM a Tensor?",
+      "speakers": "Burke Holland, Anthony Shaw",
+      "sentence": "Anthony Shaw is introduced as a technical advisor and former Python advocate at Microsoft, having contributed to Python-related work for several years.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/520dcf59-8b05-4f90-aee1-42ae648865ab",
+      "video": "https://medius.microsoft.com/Embed/video-nc/520dcf59-8b05-4f90-aee1-42ae648865ab",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE165"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE165",
+      "title": "Is DOOM a Tensor?",
+      "speakers": "Burke Holland, Anthony Shaw",
+      "sentence": "Despite performance challenges, this playful experiment becomes part of Microsoft Build 2026\u2019s announcements, showing \u201cDoom runs in Excel\u201d in a retro AI-generated promotion.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/520dcf59-8b05-4f90-aee1-42ae648865ab",
+      "video": "https://medius.microsoft.com/Embed/video-nc/520dcf59-8b05-4f90-aee1-42ae648865ab",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE165"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE172",
+      "title": "Build and ship faster with a developer-optimized Windows experience",
+      "speakers": "Nikola Metulev, Beth Pan, Aditya Ramnathkar",
+      "sentence": "Following this, Nicola introduces \u201cWSL Containers\u201d \u2014 a new capability that enables containerized development natively on Windows via the WSLC binary 00:06:00\u201300:06:39.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8eb66ee9-b869-4e25-a1e3-d19c18f30d2b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8eb66ee9-b869-4e25-a1e3-d19c18f30d2b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE172"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "LIVE172",
+      "title": "Build and ship faster with a developer-optimized Windows experience",
+      "speakers": "Nikola Metulev, Beth Pan, Aditya Ramnathkar",
+      "sentence": "AI Hardware and Closing Reflections: The presentation closes with Aditya introducing the new Surface RTX Spark Dev Box 00:14:22, a purpose-built developer machine with NVIDIA RTX Spark GPU configured for local AI computation featuring up to 1 petaflop of performance and 128 GB of unified memory.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8eb66ee9-b869-4e25-a1e3-d19c18f30d2b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8eb66ee9-b869-4e25-a1e3-d19c18f30d2b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE172"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "OD828",
+      "title": "Latest Cobalt VMs and Azure Boost enhancements\u200b",
+      "speakers": "Amar Dhamdhere, Niko Pamboukas",
+      "sentence": "Introduction and Overview of Azure Cobalt: The video begins with Amar Dhamdhere introducing himself as a Project Manager from the Azure Compute VM Sizes Team and sets the context by describing Azure\u2019s commitment to optimized virtual machine (VM) performance (00:00:07).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/928b0d8e-af20-4b87-a5b6-8becc44e2911",
+      "video": "https://medius.microsoft.com/Embed/video-nc/928b0d8e-af20-4b87-a5b6-8becc44e2911",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD828"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "OD828",
+      "title": "Latest Cobalt VMs and Azure Boost enhancements\u200b",
+      "speakers": "Amar Dhamdhere, Niko Pamboukas",
+      "sentence": "Benchmarks reveal consistent gains across industry-standard, Microsoft-internal, and real product workloads\u2014all confirming per-core performance improvements.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/928b0d8e-af20-4b87-a5b6-8becc44e2911",
+      "video": "https://medius.microsoft.com/Embed/video-nc/928b0d8e-af20-4b87-a5b6-8becc44e2911",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD828"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "OD828",
+      "title": "Latest Cobalt VMs and Azure Boost enhancements\u200b",
+      "speakers": "Amar Dhamdhere, Niko Pamboukas",
+      "sentence": "Intel, AMD VM Announcements and Azure Compute Security Innovations: The final segments feature Amar detailing new Intel and AMD general compute VMs powered by Azure Boost and next-gen CPUs (00:24:35).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/928b0d8e-af20-4b87-a5b6-8becc44e2911",
+      "video": "https://medius.microsoft.com/Embed/video-nc/928b0d8e-af20-4b87-a5b6-8becc44e2911",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD828"
+    },
+    {
+      "topic": "AI Infrastructure",
+      "code": "ODSP900",
+      "title": "Performance tuning on Cobalt with Arm Performix\u200b",
+      "speakers": "David Haikney",
+      "sentence": "Basic Concepts and Setup: When introducing the Performix UI (00:02:07), David explains that users can work through the interface or the command line.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/96f9277a-f0b3-4e0c-8d91-55c4b9785084",
+      "video": "https://medius.microsoft.com/Embed/video-nc/96f9277a-f0b3-4e0c-8d91-55c4b9785084",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP900"
+    },
+    {
+      "topic": "Models",
+      "code": "BRK200",
+      "title": "Why your AI code doesn\u2019t ship: Closing the gap to production",
+      "speakers": "Mario Rodriguez, Evan Boyle",
+      "sentence": "Finally, Evan unveils \u201cAgent Merge,\u201d which autonomously manages pull requests, reacts to feedback, resolves conflicts, and merges code once tests pass (00:26:07).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/a6e942b5-ceab-40f1-9a69-03390a58d306",
+      "video": "https://medius.microsoft.com/Embed/video-nc/a6e942b5-ceab-40f1-9a69-03390a58d306",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK200"
+    },
+    {
+      "topic": "Models",
+      "code": "BRK203",
+      "title": "From CLI to PR: Automating the path to merged code",
+      "speakers": "Evan Boyle, Cassidy Williams, Katie Liu",
+      "sentence": "AI Tools and the Power of the CLI: After introducing the broader landscape, Cassidy highlights the ascendancy of AI development tools, situating GitHub Copilot as central to this productivity transformation 00:02:01.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK203"
+    },
+    {
+      "topic": "Models",
+      "code": "BRK203",
+      "title": "From CLI to PR: Automating the path to merged code",
+      "speakers": "Evan Boyle, Cassidy Williams, Katie Liu",
+      "sentence": "The \u201cexperimental\u201d mode is portrayed as a space for early adopters to test upcoming features such as voice mode, which enables spoken interaction directly in the terminal 00:10:50.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK203"
+    },
+    {
+      "topic": "Models",
+      "code": "BRK203",
+      "title": "From CLI to PR: Automating the path to merged code",
+      "speakers": "Evan Boyle, Cassidy Williams, Katie Liu",
+      "sentence": "Cassidy also announces the CLI\u2019s integration with JetBrains IDEs, allowing developers to harness Copilot agents without leaving their editors 00:14:24.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK203"
+    },
+    {
+      "topic": "Models",
+      "code": "BRK203",
+      "title": "From CLI to PR: Automating the path to merged code",
+      "speakers": "Evan Boyle, Cassidy Williams, Katie Liu",
+      "sentence": "The GitHub Copilot SDK\u2014built on top of the CLI\u2014is introduced as a foundation for creating custom agent-driven applications across browsers, office software, or chat systems.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK203"
+    },
+    {
+      "topic": "Models",
+      "code": "BRK203",
+      "title": "From CLI to PR: Automating the path to merged code",
+      "speakers": "Evan Boyle, Cassidy Williams, Katie Liu",
+      "sentence": "They invite viewers to explore further through GitHub\u2019s free \u201cCopilot CLI for Beginners\u201d course and continue experimenting with new features 00:46:38.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b2b9417e-2b22-4732-aaac-24df66a625f7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK203"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM303",
+      "title": "Late to agentic coding? Don\u2019t panic, build.",
+      "speakers": "Cassidy Williams, Martin Woodward",
+      "sentence": "A quick survey of the audience reveals how many are using GitHub Copilot in different environments such as VS Code, Visual Studio, command line, and the recently announced GitHub app 00:01:20\u201300:01:40.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4c6da11e-f9a7-4141-b2ba-ffec4bfeb86e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4c6da11e-f9a7-4141-b2ba-ffec4bfeb86e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM303"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM303",
+      "title": "Late to agentic coding? Don\u2019t panic, build.",
+      "speakers": "Cassidy Williams, Martin Woodward",
+      "sentence": "They introduce \u201cRubber Duck,\u201d a validation step where a second model reviews a plan for logic gaps, demonstrating measurable improvements from multi-model collaboration 00:19:05.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4c6da11e-f9a7-4141-b2ba-ffec4bfeb86e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4c6da11e-f9a7-4141-b2ba-ffec4bfeb86e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM303"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM303",
+      "title": "Late to agentic coding? Don\u2019t panic, build.",
+      "speakers": "Cassidy Williams, Martin Woodward",
+      "sentence": "Closing Thoughts and Call to Action:  \nAs the session closes, both presenters encourage the audience to continue experimenting with the tools introduced and visit the developer lab areas to collaborate further 00:25:46.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4c6da11e-f9a7-4141-b2ba-ffec4bfeb86e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4c6da11e-f9a7-4141-b2ba-ffec4bfeb86e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM303"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM315",
+      "title": "Embracing frontier R&D with Microsoft Discovery",
+      "speakers": "John Link, Viktor Veis",
+      "sentence": "In November 2023, new models like GPT-4.5 and GPT-5.2 introduced advanced AI agency, crossing the threshold where systems could autonomously generate entire solutions\u2014a transformation John predicts is now coming to scientific discovery 00:02:17\u201300:02:48.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/fdbf653e-2bbd-4ef5-bcdc-d3ff526ebd98",
+      "video": "https://medius.microsoft.com/Embed/video-nc/fdbf653e-2bbd-4ef5-bcdc-d3ff526ebd98",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM315"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM315",
+      "title": "Embracing frontier R&D with Microsoft Discovery",
+      "speakers": "John Link, Viktor Veis",
+      "sentence": "Introducing Microsoft Discovery and the New App: John explains that Microsoft Discovery enables AI-driven scientific processes at scale, where thousands or even millions of hypotheses can be explored in parallel 00:04:23\u201300:04:45.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/fdbf653e-2bbd-4ef5-bcdc-d3ff526ebd98",
+      "video": "https://medius.microsoft.com/Embed/video-nc/fdbf653e-2bbd-4ef5-bcdc-d3ff526ebd98",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM315"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM315",
+      "title": "Embracing frontier R&D with Microsoft Discovery",
+      "speakers": "John Link, Viktor Veis",
+      "sentence": "He recaps prior milestones, noting its introduction at Build as a private preview and its current general availability 00:04:50\u201300:04:54.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/fdbf653e-2bbd-4ef5-bcdc-d3ff526ebd98",
+      "video": "https://medius.microsoft.com/Embed/video-nc/fdbf653e-2bbd-4ef5-bcdc-d3ff526ebd98",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM315"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM350",
+      "title": "GitHub Agentic Workflows: Automation That Actually Reads the Room",
+      "speakers": "Ari LiVigni, Alejandro Menocal",
+      "sentence": "They introduce their discussion topic\u2014GitHub Agentic Workflows\u2014highlighting how automation powered by AI can dynamically \"read the room\" and adapt processes intelligently 00:00:22.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ce603017-0583-4aa8-85a6-a7fb79aaa496",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ce603017-0583-4aa8-85a6-a7fb79aaa496",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM350"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM350",
+      "title": "GitHub Agentic Workflows: Automation That Actually Reads the Room",
+      "speakers": "Ari LiVigni, Alejandro Menocal",
+      "sentence": "Alejandro highlights the ecosystem\u2019s flexibility and mentions the upcoming public preview release planned for the following week, inviting participants to experiment through GitHub\u2019s website and use a new skills exercise to explore workflow capabilities firsthand 00:01:58.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ce603017-0583-4aa8-85a6-a7fb79aaa496",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ce603017-0583-4aa8-85a6-a7fb79aaa496",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM350"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM360",
+      "title": "Discovering Power App Data with M365 Copilot using MCP",
+      "speakers": "Christine Flora",
+      "sentence": "The agenda includes an overview of Power Apps, a live demo building a custom MCP tool with Visual Studio Code and AI assistance, and guidance on prerequisites and setup as the feature enters public preview 00:01:31.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/47a31e54-7ea0-4b32-be8e-f7c6400735e6",
+      "video": "https://medius.microsoft.com/Embed/video-nc/47a31e54-7ea0-4b32-be8e-f7c6400735e6",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM360"
+    },
+    {
+      "topic": "Models",
+      "code": "DEM360",
+      "title": "Discovering Power App Data with M365 Copilot using MCP",
+      "speakers": "Christine Flora",
+      "sentence": "Christine showcases two advanced UI extensions: an equipment work order dashboard and a timeline visualization for upcoming and overdue maintenance 00:11:28\u201300:13:32.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/47a31e54-7ea0-4b32-be8e-f7c6400735e6",
+      "video": "https://medius.microsoft.com/Embed/video-nc/47a31e54-7ea0-4b32-be8e-f7c6400735e6",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM360"
+    },
+    {
+      "topic": "Models",
+      "code": "DEMSP394",
+      "title": "Scale enterprise .NET apps with AI\u2011assisted cross\u2011platform workflows",
+      "speakers": "Sam Basu, Colin Whitlatch",
+      "sentence": "The speakers position the talk as an exploration of how developer tooling is evolving to support agentic, AI-enhanced workflows in real-world applications, setting the tone for multiple announcements during the session.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/90f6fe71-8cba-465f-b53c-a3ed30e154c6",
+      "video": "https://medius.microsoft.com/Embed/video-nc/90f6fe71-8cba-465f-b53c-a3ed30e154c6",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP394"
+    },
+    {
+      "topic": "Models",
+      "code": "DEMSP394",
+      "title": "Scale enterprise .NET apps with AI\u2011assisted cross\u2011platform workflows",
+      "speakers": "Sam Basu, Colin Whitlatch",
+      "sentence": "Introducing Uno Platform Studio and Tooling: The speakers then present Uno Platform Studio as a suite of AI and design tools for modern .NET development (00:03:16\u201300:04:55).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/90f6fe71-8cba-465f-b53c-a3ed30e154c6",
+      "video": "https://medius.microsoft.com/Embed/video-nc/90f6fe71-8cba-465f-b53c-a3ed30e154c6",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP394"
+    },
+    {
+      "topic": "Models",
+      "code": "DEMSP394",
+      "title": "Scale enterprise .NET apps with AI\u2011assisted cross\u2011platform workflows",
+      "speakers": "Sam Basu, Colin Whitlatch",
+      "sentence": "This segment emphasizes context-driven AI, ensuring that generated code aligns with project documentation and user interaction patterns\u2014what they call \u201cAI with eyes and hands.\u201d\n\nUno Platform Studio 3.0 Announced and Demoed: A major announcement follows\u2014the launch of Uno Platform Studio 3.0 (00:05:08\u201300:09:00).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/90f6fe71-8cba-465f-b53c-a3ed30e154c6",
+      "video": "https://medius.microsoft.com/Embed/video-nc/90f6fe71-8cba-465f-b53c-a3ed30e154c6",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP394"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE101",
+      "title": "Scott and Mark learn to Vibe Check",
+      "speakers": "Scott Hanselman, Mark Russinovich",
+      "sentence": "Sanderson unveils \u201cVibe OS,\u201d described as the world\u2019s first \u201challucinated operating system.\u201d Demonstrating live, he boots a lightweight virtual disk file and launches familiar applications such as Notepad and Calculator.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/df6b109e-848b-4a7a-b791-fcd1e8029278",
+      "video": "https://medius.microsoft.com/Embed/video-nc/df6b109e-848b-4a7a-b791-fcd1e8029278",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE101"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE101",
+      "title": "Scott and Mark learn to Vibe Check",
+      "speakers": "Scott Hanselman, Mark Russinovich",
+      "sentence": "Through animated queries and \u201ctables,\u201d she reveals that what seems like traditional JavaScript-driven logic is entirely composed of CSS selectors, variables, and sibling indices.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/df6b109e-848b-4a7a-b791-fcd1e8029278",
+      "video": "https://medius.microsoft.com/Embed/video-nc/df6b109e-848b-4a7a-b791-fcd1e8029278",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE101"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE110",
+      "title": "Backing the future of innovation",
+      "speakers": "The Chainsmokers, Charles Lamanna",
+      "sentence": "The group discusses integrating AI into existing workflows\u2014rather than forcing new tool adoption\u2014and applauds the growing movement to bring AI into spaces people already work.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b149b982-e4e6-475e-8a2d-8c9391b83ab7",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b149b982-e4e6-475e-8a2d-8c9391b83ab7",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE110"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE114",
+      "title": "Scott and Mark learn to Vibe Check with Cassidy Williams",
+      "speakers": "Scott Hanselman, Cassidy Williams",
+      "sentence": "Initially, it seems to be a legitimate in-browser SQLite interface, but Cassidy soon reveals the twist: there is no actual database or query engine\u2014everything is powered purely by CSS 00:02:15.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/aabe7791-a560-45b5-8c66-f6f12a88a9c1",
+      "video": "https://medius.microsoft.com/Embed/video-nc/aabe7791-a560-45b5-8c66-f6f12a88a9c1",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE114"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE114",
+      "title": "Scott and Mark learn to Vibe Check with Cassidy Williams",
+      "speakers": "Scott Hanselman, Cassidy Williams",
+      "sentence": "The session wraps up with thanks to sponsors and an announcement for more quirky and \u201ccursed\u201d coding projects coming after the break 00:11:41.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/aabe7791-a560-45b5-8c66-f6f12a88a9c1",
+      "video": "https://medius.microsoft.com/Embed/video-nc/aabe7791-a560-45b5-8c66-f6f12a88a9c1",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE114"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE144",
+      "title": "Behind the Keynote: How Windows Made OpenClaw Work in the Keynote Demo",
+      "speakers": "Monica Cisneros, Scott Hanselman",
+      "sentence": "Introduction and Collaboration Story: The video begins with Monica Cisneros introducing herself as the Senior Product Marketing Manager for Windows, joined by Scott Hanselman (00:00:01).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/710e231b-0fbe-47fb-8681-ad4344165d34",
+      "video": "https://medius.microsoft.com/Embed/video-nc/710e231b-0fbe-47fb-8681-ad4344165d34",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE144"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE145",
+      "title": "Coding and Personal Agents with Ollama",
+      "speakers": "Michael Chiang, John Maeda, Parth Sareen",
+      "sentence": "The team previews an upcoming breakout session showcasing live demos and more agentic task examples 00:10:00\u201300:10:12.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/f6e2dbf7-2eac-48a8-ac0f-9c687945de59",
+      "video": "https://medius.microsoft.com/Embed/video-nc/f6e2dbf7-2eac-48a8-ac0f-9c687945de59",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE145"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE151",
+      "title": "Extend GitHub Copilot with the Copilot SDK",
+      "speakers": "Burke Holland, Patrick Nikoletich",
+      "sentence": "Patrick notes the SDK\u2019s general availability (GA) status, announced just the day before, marking a major milestone for developers across Microsoft and its subsidiaries like LinkedIn, Xbox, and GitHub.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/175f1178-984b-4d72-b15b-108d8d67dec2",
+      "video": "https://medius.microsoft.com/Embed/video-nc/175f1178-984b-4d72-b15b-108d8d67dec2",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE151"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE151",
+      "title": "Extend GitHub Copilot with the Copilot SDK",
+      "speakers": "Burke Holland, Patrick Nikoletich",
+      "sentence": "New SDK features like remote access, ephemeral cloud sandboxes, and local sandbox environments are now available for preview, offering developers flexibility to prototype without heavy setup 00:12:01\u201300:12:19.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/175f1178-984b-4d72-b15b-108d8d67dec2",
+      "video": "https://medius.microsoft.com/Embed/video-nc/175f1178-984b-4d72-b15b-108d8d67dec2",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE151"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE151",
+      "title": "Extend GitHub Copilot with the Copilot SDK",
+      "speakers": "Burke Holland, Patrick Nikoletich",
+      "sentence": "Patrick invites attendees to his upcoming session from 4:00\u20135:00 PM in Breakout 1 for a deeper technical dive into the Copilot SDK\u2019s future and cross-Microsoft integration 00:15:08\u201300:15:25.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/175f1178-984b-4d72-b15b-108d8d67dec2",
+      "video": "https://medius.microsoft.com/Embed/video-nc/175f1178-984b-4d72-b15b-108d8d67dec2",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE151"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE156",
+      "title": "Designing VS Code\u2019s UX for the Agentic Era",
+      "speakers": "Burke Holland, Joanna Oikawa",
+      "sentence": "The conversation at 00:02:45 reveals that these decisions are informed by user research and telemetry, focusing on how developers engage with sessions and projects.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/705403fe-f8ee-43bd-a13d-b49502401ad9",
+      "video": "https://medius.microsoft.com/Embed/video-nc/705403fe-f8ee-43bd-a13d-b49502401ad9",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE156"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE156",
+      "title": "Designing VS Code\u2019s UX for the Agentic Era",
+      "speakers": "Burke Holland, Joanna Oikawa",
+      "sentence": "She stresses the importance of validation\u2014testing whether quick fixes and new features actually serve their purpose rather than just adding noise.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/705403fe-f8ee-43bd-a13d-b49502401ad9",
+      "video": "https://medius.microsoft.com/Embed/video-nc/705403fe-f8ee-43bd-a13d-b49502401ad9",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE156"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE168",
+      "title": "Claude Is in Copilot. Here's What That Actually Means",
+      "speakers": "Burke Holland, Tyler Leonhardt",
+      "sentence": "The conversation quickly pivots toward the main topic \u2014 exploring new features in VS Code that incorporate Claude agents, signaling a shift from the more familiar Copilot focus at 00:00:30.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/13f19aee-b872-4a65-8156-2ae9842c4178",
+      "video": "https://medius.microsoft.com/Embed/video-nc/13f19aee-b872-4a65-8156-2ae9842c4178",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE168"
+    },
+    {
+      "topic": "Models",
+      "code": "LIVE168",
+      "title": "Claude Is in Copilot. Here's What That Actually Means",
+      "speakers": "Burke Holland, Tyler Leonhardt",
+      "sentence": "Conversation on Real-World Use and Demonstration Setup: Adding personality to the discussion, Tyler reveals he organizes local improv events and demonstrates using Copilot and Claude together to generate a website for an event called \"Compliment Fest\" (00:03:39).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/13f19aee-b872-4a65-8156-2ae9842c4178",
+      "video": "https://medius.microsoft.com/Embed/video-nc/13f19aee-b872-4a65-8156-2ae9842c4178",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE168"
+    },
+    {
+      "topic": "Models",
+      "code": "ODSP906",
+      "title": "Apply orchestration patterns for production AI agents",
+      "speakers": "Cliff Simpkins",
+      "sentence": "Exploring Maestro Flow and Enterprise Process Modeling: Beginning at 00:08:12, Vikram Kakumani and Milo Shields introduce Maestro Flow\u2014the new visual canvas for developers.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/716ac10b-3253-4e07-af14-68866af36f67",
+      "video": "https://medius.microsoft.com/Embed/video-nc/716ac10b-3253-4e07-af14-68866af36f67",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP906"
+    },
+    {
+      "topic": "Models",
+      "code": "ODSP923",
+      "title": "Create enterprise apps with AI and MCP",
+      "speakers": "Jason Beres",
+      "sentence": "Introduction and Overview: The presenter, Jason Beres, begins by introducing the topic of creating enterprise applications leveraging AI and low-code capabilities (00:00:01\u201300:00:11).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ca45af6a-86b5-4082-921a-c2c8f5fe346e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ca45af6a-86b5-4082-921a-c2c8f5fe346e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP923"
+    },
+    {
+      "topic": "Models",
+      "code": "ODSP923",
+      "title": "Create enterprise apps with AI and MCP",
+      "speakers": "Jason Beres",
+      "sentence": "He also announces the launch of a new WinUI component suite introduced at Build 2026 (00:01:55\u201300:02:03), highlighting support for MAUI as part of their cross-platform approach.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ca45af6a-86b5-4082-921a-c2c8f5fe346e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ca45af6a-86b5-4082-921a-c2c8f5fe346e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP923"
+    },
+    {
+      "topic": "Models",
+      "code": "ODSP923",
+      "title": "Create enterprise apps with AI and MCP",
+      "speakers": "Jason Beres",
+      "sentence": "Exploration of Products and App Builder Overview: Jason shows how visitors can learn more about Infragistics products such as UI components, Reveal for embedded analytics, and Slingshot for AI-native work management from the company website (00:02:34\u201300:02:52).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ca45af6a-86b5-4082-921a-c2c8f5fe346e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ca45af6a-86b5-4082-921a-c2c8f5fe346e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP923"
+    },
+    {
+      "topic": "Models",
+      "code": "ODSP929",
+      "title": "Build modern .NET apps with Uno Platform, AI, and visual tools",
+      "speakers": "Sam Basu",
+      "sentence": "In closing, Sam invites attendees to meet the Uno Platform team at Microsoft Build, attend their theater sessions in collaboration with Kahua, and explore upcoming announcements (00:18:26).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/007f6aac-9c60-4853-b8e9-b4bfba63ec1d",
+      "video": "https://medius.microsoft.com/Embed/video-nc/007f6aac-9c60-4853-b8e9-b4bfba63ec1d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP929"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK201",
+      "title": "Multi-agent patterns in VS Code you won't learn from docs",
+      "speakers": "Pierce Boggan, Kent C. Dodds, Burke Holland, Julia Kasper, Harald Kirschner, Chris Reddington",
+      "sentence": "Contestants and Tools Overview: The competition\u2019s participants are introduced along with the tools they will use 00:03:52.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c3a80714-e18b-4cd1-b75c-92204129a14d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK201"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK201",
+      "title": "Multi-agent patterns in VS Code you won't learn from docs",
+      "speakers": "Pierce Boggan, Kent C. Dodds, Burke Holland, Julia Kasper, Harald Kirschner, Chris Reddington",
+      "sentence": "The closing remarks emphasize the difficulty of live coding, appreciation for the participants, and encourage attendees to join upcoming Copilot and multi-agent sessions, thanking everyone for attending 00:46:13.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c3a80714-e18b-4cd1-b75c-92204129a14d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK201"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK202",
+      "title": "Azure DevOps meets GitHub, the path to AI powered SDLC",
+      "speakers": "Dave Burnison, Dan Hellem, Lan Kaim",
+      "sentence": "Dan then unveils Copilot Auto Fix for GitHub Advanced Security 00:36:00\u201300:37:40, which allows dynamic background pipeline processing to automatically generate secure code updates and pull requests using CodeQL scans.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/ce405956-4847-4b45-a5e6-e2fa334f2cfe",
+      "video": "https://medius.microsoft.com/Embed/video-nc/ce405956-4847-4b45-a5e6-e2fa334f2cfe",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK202"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK207",
+      "title": "GitHub Copilot in Visual Studio: Agents That Debug, Profile, and Test",
+      "speakers": "Nik Karpinsky, Mads Kristensen, Anisha Pindoria",
+      "sentence": "Upcoming Features and Roadmap: In the later part of the talk (00:33:00\u201300:41:00), Matt outlines several upcoming Visual Studio and Copilot capabilities.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/45d559ef-d829-4eda-a101-b034bea5bcb3",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK207"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK207",
+      "title": "GitHub Copilot in Visual Studio: Agents That Debug, Profile, and Test",
+      "speakers": "Nik Karpinsky, Mads Kristensen, Anisha Pindoria",
+      "sentence": "They close with encouragement to try the upcoming Insider builds of Visual Studio 2026, highlighting the broad innovation pipeline extending through the summer and inviting developers to test new features first-hand.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/45d559ef-d829-4eda-a101-b034bea5bcb3",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK207"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK225",
+      "title": "Data, apps, and agents: the future of app dev with Rayfin",
+      "speakers": "Sachin Patney, Ben Zulauf",
+      "sentence": "Introducing Raefen \u2013 The AI Coding Backend: Addressing these gaps, Ben introduces Raefen as a backend framework for the AI coding era 00:02:34.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c1caffa3-94c6-4ba4-92e3-1aef6b91878d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK225"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK225",
+      "title": "Data, apps, and agents: the future of app dev with Rayfin",
+      "speakers": "Sachin Patney, Ben Zulauf",
+      "sentence": "Partnerships, Future Roadmap, and Conclusion: To make Raefen accessible beyond traditional IDE users, Microsoft announced a partnership with Replit, represented by Carl, who demonstrates how non-technical users can build analytic dashboards directly within Replit using Raefen and Fabric integration 00:26:01.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c1caffa3-94c6-4ba4-92e3-1aef6b91878d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK225"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK225",
+      "title": "Data, apps, and agents: the future of app dev with Rayfin",
+      "speakers": "Sachin Patney, Ben Zulauf",
+      "sentence": "Ben returns to conclude by outlining Raefen\u2019s roadmap\u2014upcoming features include function support, RBAC, enhanced connectors, and integration with OneLake 00:28:32.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c1caffa3-94c6-4ba4-92e3-1aef6b91878d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK225"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK228",
+      "title": "Modern resiliency from build to recovery through Agentic AI",
+      "speakers": "Rochak Mittal, Adity Agarwal, Shobhit Garg",
+      "sentence": "Introduction and Core Principles: The session begins with Abhimanyu, joined by Aditi and Shobhit, introducing the theme of resiliency and new agent capabilities designed to help users identify and mitigate gaps in their systems (00:00:05).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/35984817-c07b-4b72-a5f0-2f8a6803325d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK228"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK228",
+      "title": "Modern resiliency from build to recovery through Agentic AI",
+      "speakers": "Rochak Mittal, Adity Agarwal, Shobhit Garg",
+      "sentence": "Unified Resiliency Management and Public Preview Announcements: The speakers highlight the evolution from Azure Business Continuity Center to a unified \u201cAzure Resiliency\u201d platform announced at Ignite (00:05:11).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/35984817-c07b-4b72-a5f0-2f8a6803325d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK228"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK228",
+      "title": "Modern resiliency from build to recovery through Agentic AI",
+      "speakers": "Rochak Mittal, Adity Agarwal, Shobhit Garg",
+      "sentence": "They introduce the concept of service groups, which shift planning from individual resources to entire applications, reflecting a business-centric resilience model.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/35984817-c07b-4b72-a5f0-2f8a6803325d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK228"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK228",
+      "title": "Modern resiliency from build to recovery through Agentic AI",
+      "speakers": "Rochak Mittal, Adity Agarwal, Shobhit Garg",
+      "sentence": "New additions include the Resiliency Manager public preview\u2014providing zonal resiliency management, automated goal assignments, continuous health checks, and simulated resiliency drills powered by Chaos Studio (00:07:00), allowing developers to test and improve their failover readiness through real-world failure simulations.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/35984817-c07b-4b72-a5f0-2f8a6803325d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK228"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK228",
+      "title": "Modern resiliency from build to recovery through Agentic AI",
+      "speakers": "Rochak Mittal, Adity Agarwal, Shobhit Garg",
+      "sentence": "A subsequent section reveals AI-powered prioritization in Azure Advisor, where recommendations are ranked based on factors such as blast radius, deadlines, and cost (00:33:23).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/35984817-c07b-4b72-a5f0-2f8a6803325d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK228"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK228",
+      "title": "Modern resiliency from build to recovery through Agentic AI",
+      "speakers": "Rochak Mittal, Adity Agarwal, Shobhit Garg",
+      "sentence": "Staying Resilient and Final Announcements: The closing section emphasizes the importance of continuous validation through simulated fault conditions.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/35984817-c07b-4b72-a5f0-2f8a6803325d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK228"
+    },
+    {
+      "topic": "Agents",
+      "code": "BRK228",
+      "title": "Modern resiliency from build to recovery through Agentic AI",
+      "speakers": "Rochak Mittal, Adity Agarwal, Shobhit Garg",
+      "sentence": "At Build, Microsoft announces the public preview of Azure Chaos Studio Workspaces launching June 11 (00:44:00), a new application-centric environment for resilience testing.",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/35984817-c07b-4b72-a5f0-2f8a6803325d",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK228"
+    },
+    {
+      "topic": "Agents",
+      "code": "DEM301",
+      "title": "Rethinking CI: Actions, AI Agents, and the End of Commit-Fail-Commit",
+      "speakers": "Salil Subbakrishna, Denizhan Yigitbas",
+      "sentence": "Introducing the Actions Debugger: After showing how agentic workflows handle automated analysis, Salil transitions to the upcoming Actions Debugger, designed for deeper human-in-the-loop investigation when workflows behave unpredictably 00:10:49.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/079bf23f-302e-4b23-bc15-add6bb85deee",
+      "video": "https://medius.microsoft.com/Embed/video-nc/079bf23f-302e-4b23-bc15-add6bb85deee",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM301"
+    },
+    {
+      "topic": "Agents",
+      "code": "DEM301",
+      "title": "Rethinking CI: Actions, AI Agents, and the End of Commit-Fail-Commit",
+      "speakers": "Salil Subbakrishna, Denizhan Yigitbas",
+      "sentence": "Roadmap, Availability, and Closing Remarks: The presentation wraps up with announcements on release timelines 00:20:40.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/079bf23f-302e-4b23-bc15-add6bb85deee",
+      "video": "https://medius.microsoft.com/Embed/video-nc/079bf23f-302e-4b23-bc15-add6bb85deee",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM301"
+    },
+    {
+      "topic": "Agents",
+      "code": "DEM301",
+      "title": "Rethinking CI: Actions, AI Agents, and the End of Commit-Fail-Commit",
+      "speakers": "Salil Subbakrishna, Denizhan Yigitbas",
+      "sentence": "Agentic workflows will enter public preview the following week, supported by documentation and quick-start examples for issue management, documentation automation, and multi-repository orchestration.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/079bf23f-302e-4b23-bc15-add6bb85deee",
+      "video": "https://medius.microsoft.com/Embed/video-nc/079bf23f-302e-4b23-bc15-add6bb85deee",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM301"
+    },
+    {
+      "topic": "Agents",
+      "code": "DEM351",
+      "title": "AI Skills Navigator: Accelerate tech skills with personalized learning",
+      "speakers": "Shreenidhi Bindinganavile Ramanuja, Matt Erni",
+      "sentence": "They encourage viewers to register, personalize their profiles, and join the upcoming \u201cSkills Fest\u201d event taking place June 8\u201312 as a next step in advancing their AI learning journey (00:22:21).",
+      "transcript": "",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9dbfe949-af78-47ce-b6ed-97552be1217b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM351"
+    },
+    {
+      "topic": "Agents",
+      "code": "DEMSP382",
+      "title": "Build AI Apps with Oracle AI Database@Azure, MCP, and GitHub Copilot",
+      "speakers": "Rajya Laxmi Yellajosyula, Partha Srinivasan",
+      "sentence": "Oracle Database on Azure is introduced as a native service available through the Azure Marketplace, enabling seamless integration in development environments 00:01:16\u201301:01:24.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/c0c8d8d2-d75e-491a-857e-be570cdbd42f",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c0c8d8d2-d75e-491a-857e-be570cdbd42f",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEMSP382"
+    },
+    {
+      "topic": "Agents",
+      "code": "LIVE149",
+      "title": "Day 1 Recap: What You Missed (or Watched Twice)",
+      "speakers": "Pierce Boggan, Burke Holland",
+      "sentence": "Announcements and Community Engagement: Following introductions, Burke outlines several announcements and event highlights for attendees 00:00:43\u201300:00:52.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4b5c196a-6068-418a-81e9-a122f5107c15",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4b5c196a-6068-418a-81e9-a122f5107c15",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE149"
+    },
+    {
+      "topic": "Agents",
+      "code": "LIVE149",
+      "title": "Day 1 Recap: What You Missed (or Watched Twice)",
+      "speakers": "Pierce Boggan, Burke Holland",
+      "sentence": "Pierce amusingly reveals he will be \u201clocked in\u201d for a live coding session later, continuing the playful banter.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4b5c196a-6068-418a-81e9-a122f5107c15",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4b5c196a-6068-418a-81e9-a122f5107c15",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE149"
+    },
+    {
+      "topic": "Agents",
+      "code": "LIVE149",
+      "title": "Day 1 Recap: What You Missed (or Watched Twice)",
+      "speakers": "Pierce Boggan, Burke Holland",
+      "sentence": "Sessions and Fun Events: Burke then promotes upcoming sessions including the \u201cVS Code team\u2019s AI adoption story\u201d led by Pierce and Josh 00:01:47\u201300:02:01.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4b5c196a-6068-418a-81e9-a122f5107c15",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4b5c196a-6068-418a-81e9-a122f5107c15",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE149"
+    },
+    {
+      "topic": "Agents",
+      "code": "LIVE154",
+      "title": "Your Browser Lives in VS Code Now",
+      "speakers": "Justin Chen, Burke Holland",
+      "sentence": "He introduces Justin from the Visual Studio Code (VS Code) team, setting the stage for a discussion focused on new features developed for the popular editor.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/cc424a49-15c3-479e-99d9-830cac9021ca",
+      "video": "https://medius.microsoft.com/Embed/video-nc/cc424a49-15c3-479e-99d9-830cac9021ca",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE154"
+    },
+    {
+      "topic": "Agents",
+      "code": "LIVE169",
+      "title": "The New Agents Window in VS Code",
+      "speakers": "Burke Holland, Harald Kirschner",
+      "sentence": "Introducing the Agent Window Concept: The talk transitions at 00:01:02 to focus on the new \"agent window,\" previously called the \"agent sessions window.\" Harold describes how it evolved to streamline work with multiple coding agents and projects.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/39e7b927-a96f-4e0c-bc26-8d9fb757cd58",
+      "video": "https://medius.microsoft.com/Embed/video-nc/39e7b927-a96f-4e0c-bc26-8d9fb757cd58",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE169"
+    },
+    {
+      "topic": "Agents",
+      "code": "LIVE169",
+      "title": "The New Agents Window in VS Code",
+      "speakers": "Burke Holland, Harald Kirschner",
+      "sentence": "He shares his setup using VS Code customization hooks to trigger spoken summaries through local speech models when a task completes\u2014his computer announces completion details aloud 00:06:33.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/39e7b927-a96f-4e0c-bc26-8d9fb757cd58",
+      "video": "https://medius.microsoft.com/Embed/video-nc/39e7b927-a96f-4e0c-bc26-8d9fb757cd58",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE169"
+    },
+    {
+      "topic": "Agents",
+      "code": "LIVE169",
+      "title": "The New Agents Window in VS Code",
+      "speakers": "Burke Holland, Harald Kirschner",
+      "sentence": "Cost Optimization and Model Routing: Near the session\u2019s close at 00:07:31, Harold introduces cost and performance improvements tied to new model usage in VS Code\u2019s AI features.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/39e7b927-a96f-4e0c-bc26-8d9fb757cd58",
+      "video": "https://medius.microsoft.com/Embed/video-nc/39e7b927-a96f-4e0c-bc26-8d9fb757cd58",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE169"
+    },
+    {
+      "topic": "Agents",
+      "code": "LIVESP128",
+      "title": "From local AI PCs to Azure: The future of open-source AI development",
+      "speakers": "Adrian Macias",
+      "sentence": "Creativity, Announcements, and Conclusion: Adrian reflects on how these technological changes unleash creativity in developers, stating that innovation is directly linked to iteration speed 00:10:20.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4f44c7a4-7e1a-4fc3-b614-690604749d97",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4f44c7a4-7e1a-4fc3-b614-690604749d97",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVESP128"
+    },
+    {
+      "topic": "Agents",
+      "code": "OD801",
+      "title": "Modernize intelligent apps and agents with .NET that scale as you grow",
+      "speakers": "Gaurav Seth, Andrew Westgarth",
+      "sentence": "The agenda covers app modernization challenges, the previously launched Managed Instance on Azure App Service from Ignite (00:00:58), the newly introduced Built-In MCP at Build (00:01:18), the GitHub Copilot modernization tooling, and a live demonstration by Gaurav followed by closing resources and insights on cloud transformation.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/d14b3177-b1c2-481c-9094-4fe12dc84b75",
+      "video": "https://medius.microsoft.com/Embed/video-nc/d14b3177-b1c2-481c-9094-4fe12dc84b75",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD801"
+    },
+    {
+      "topic": "Agents",
+      "code": "OD801",
+      "title": "Modernize intelligent apps and agents with .NET that scale as you grow",
+      "speakers": "Gaurav Seth, Andrew Westgarth",
+      "sentence": "Introducing Built-In MCP and Agentic Patterns: The session reveals a major new capability\u2014Built-In MCP\u2014unveiled at Build (00:13:03).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/d14b3177-b1c2-481c-9094-4fe12dc84b75",
+      "video": "https://medius.microsoft.com/Embed/video-nc/d14b3177-b1c2-481c-9094-4fe12dc84b75",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD801"
+    },
+    {
+      "topic": "Agents",
+      "code": "OD806",
+      "title": ".NET 11 in depth: Runtime, libraries, and SDK for the AI era",
+      "speakers": "",
+      "sentence": "The team also unveils `.NET Up`, a native AOT acquisition tool that simplifies SDK version management across platforms without administrative permissions.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/06f91e84-cd18-4043-b4b6-c4ac9b0d2b0e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/06f91e84-cd18-4043-b4b6-c4ac9b0d2b0e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD806"
+    },
+    {
+      "topic": "Agents",
+      "code": "OD806",
+      "title": ".NET 11 in depth: Runtime, libraries, and SDK for the AI era",
+      "speakers": "",
+      "sentence": "The talk closes with Rich and Chet emphasizing how developers can experiment with these preview features now, provide GitHub feedback, and help optimize .NET 11 for its upcoming general release.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/06f91e84-cd18-4043-b4b6-c4ac9b0d2b0e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/06f91e84-cd18-4043-b4b6-c4ac9b0d2b0e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD806"
+    },
+    {
+      "topic": "Agents",
+      "code": "ODSP911",
+      "title": "Build AI-first business apps that turn dashboards into actions",
+      "speakers": "Paul Usher",
+      "sentence": "Within Visual Studio, Paul reveals how this functionality is enabled via \u201cAddBlazorReportingAIIntegration\u201d calls in Program.cs.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8041cdaf-f3df-44ea-aa33-0dd7e1dd2745",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8041cdaf-f3df-44ea-aa33-0dd7e1dd2745",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP911"
+    },
+    {
+      "topic": "Agents",
+      "code": "ODSP918",
+      "title": "Build persistent and scalable AI agent memory with TiDB",
+      "speakers": "Ravish Patel",
+      "sentence": "Introduction and Problem Context: The video begins with Ravish Patel introducing himself as a solutions engineer at PingCAP working on TiDB (00:00:03).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/2ba4cfc6-63e4-4c2c-bedc-0884e1141a16",
+      "video": "https://medius.microsoft.com/Embed/video-nc/2ba4cfc6-63e4-4c2c-bedc-0884e1141a16",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP918"
+    },
+    {
+      "topic": "Agents",
+      "code": "ODSP937",
+      "title": "Build realtime multimodal agents with LiveKit and Azure",
+      "speakers": "Jesse Hall",
+      "sentence": "The session\u2019s focus is announced \u2014 exploring LiveKit, the cascaded pipeline, and how Azure integrates with LiveKit 00:00:27\u201300:00:37.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/08898b31-c2d7-4d94-84c5-14f9e0e70cef",
+      "video": "https://medius.microsoft.com/Embed/video-nc/08898b31-c2d7-4d94-84c5-14f9e0e70cef",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP937"
+    },
+    {
+      "topic": "Windows",
+      "code": "BRK261",
+      "title": "Build and ship faster with a developer-optimized experience on Windows",
+      "speakers": "Kayla Cinnamon, Craig Loewen, Clint Rutkas",
+      "sentence": "She highlights upcoming desktop features, such as movable taskbars, integrated into the Windows Insider program, and an upgraded Run dialog that now uses PowerToys Command Palette architecture.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9574001f-c87e-401e-9e24-87990c6318f9",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9574001f-c87e-401e-9e24-87990c6318f9",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK261"
+    },
+    {
+      "topic": "Windows",
+      "code": "BRK261",
+      "title": "Build and ship faster with a developer-optimized experience on Windows",
+      "speakers": "Kayla Cinnamon, Craig Loewen, Clint Rutkas",
+      "sentence": "He also reveals \u201cCoreutils for Windows\u201d 00:08:23, which brings over 160 common Linux command-line tools (e.g., grep, tail, env) natively to Windows.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9574001f-c87e-401e-9e24-87990c6318f9",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9574001f-c87e-401e-9e24-87990c6318f9",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK261"
+    },
+    {
+      "topic": "Windows",
+      "code": "BRK261",
+      "title": "Build and ship faster with a developer-optimized experience on Windows",
+      "speakers": "Kayla Cinnamon, Craig Loewen, Clint Rutkas",
+      "sentence": "Integration of Containers APIs and Partner Collaborations: In the later portion (00:32:31), Craig revisits WSL containers to introduce the WSL Containers API and its integration into Windows apps.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9574001f-c87e-401e-9e24-87990c6318f9",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9574001f-c87e-401e-9e24-87990c6318f9",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK261"
+    },
+    {
+      "topic": "Windows",
+      "code": "DEM311",
+      "title": "Scale cloud-native workloads with Azure Linux",
+      "speakers": "Poorvi Narang, Jim Perrin",
+      "sentence": "Azure Container Linux 3.0 is now generally available, with version 4.0 entering preview alignment.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/1b886f16-d29b-4873-a32c-b8002baa7b46",
+      "video": "https://medius.microsoft.com/Embed/video-nc/1b886f16-d29b-4873-a32c-b8002baa7b46",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM311"
+    },
+    {
+      "topic": "Windows",
+      "code": "DEM311",
+      "title": "Scale cloud-native workloads with Azure Linux",
+      "speakers": "Poorvi Narang, Jim Perrin",
+      "sentence": "The presenters summarize product availability: Azure Linux 4.0 in public preview, with Azure Container Linux officially GA.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/1b886f16-d29b-4873-a32c-b8002baa7b46",
+      "video": "https://medius.microsoft.com/Embed/video-nc/1b886f16-d29b-4873-a32c-b8002baa7b46",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM311"
+    },
+    {
+      "topic": "Windows",
+      "code": "DEM334",
+      "title": "Build agents where work happens: chats, channels, and meetings in Microsoft Teams",
+      "speakers": "Lily Du, Umang Sehgal",
+      "sentence": "Lily announces several enhancements under \"manners,\" such as emoji reactions, quoted replies, and threaded replies (00:08:26\u201300:09:41).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/b230adf8-4c48-4bb1-9114-6c6bfd355318",
+      "video": "https://medius.microsoft.com/Embed/video-nc/b230adf8-4c48-4bb1-9114-6c6bfd355318",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM334"
+    },
+    {
+      "topic": "Windows",
+      "code": "LIVE115",
+      "title": "Scott and Mark learn to Vibe Check with Swyx",
+      "speakers": "swyx (Shawn Wang), Scott Hanselman",
+      "sentence": "Introduction and Context: At the start of the video 00:00:00\u201300:00:06, Scott and Mark introduce a segment of \"Scott and Mark Learn to Vibe\" taking place live at Microsoft Build.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e52b8eb8-f1d1-4659-9e59-f1754039b9a1",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e52b8eb8-f1d1-4659-9e59-f1754039b9a1",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE115"
+    },
+    {
+      "topic": "Windows",
+      "code": "LIVE115",
+      "title": "Scott and Mark learn to Vibe Check with Swyx",
+      "speakers": "swyx (Shawn Wang), Scott Hanselman",
+      "sentence": "He describes the app as something he\u2019s slightly nervous to reveal since it\u2019s under development but actively being used by his team.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e52b8eb8-f1d1-4659-9e59-f1754039b9a1",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e52b8eb8-f1d1-4659-9e59-f1754039b9a1",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE115"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "BRK204",
+      "title": "What we learned shipping VS Code weekly (without breaking everything)",
+      "speakers": "Pierce Boggan, Josh Spicer, Anna Soracco",
+      "sentence": "Rather than announcing a new product, the goal is to share how the team\u2019s engineering systems and processes evolved to handle AI-driven development.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8e6c2160-2e93-40ac-8b17-a731909983b0",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8e6c2160-2e93-40ac-8b17-a731909983b0",
+      "session_url": "https://build.microsoft.com/en-US/sessions/BRK204"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "DEM305",
+      "title": "GitHub Copilot Anywhere: From Remote Control CLIs to Cloud Sandboxes",
+      "speakers": "Ellie Bennett, Denizhan Yigitbas",
+      "sentence": "He unveils \"Cloud Sandbox\" for Copilot, now in public preview (00:10:22\u201300:10:45).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/c8128017-96b9-476c-9004-8ba91e2ef3cd",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c8128017-96b9-476c-9004-8ba91e2ef3cd",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM305"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "DEM305",
+      "title": "GitHub Copilot Anywhere: From Remote Control CLIs to Cloud Sandboxes",
+      "speakers": "Ellie Bennett, Denizhan Yigitbas",
+      "sentence": "Chronicle Feature and Conclusion: Ellie closes the session by introducing \"Chronicle,\" a meta-feature that logs and indexes all user Copilot sessions for insights, tips, and enhancements across platforms like CLI, VS Code, JetBrains, and github.com (00:19:57\u201300:21:09).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/c8128017-96b9-476c-9004-8ba91e2ef3cd",
+      "video": "https://medius.microsoft.com/Embed/video-nc/c8128017-96b9-476c-9004-8ba91e2ef3cd",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM305"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "DEM332",
+      "title": "From zero to teammate in 25 minutes: Build a Teams agent live",
+      "speakers": "Aamir Jawaid, Umang Sehgal",
+      "sentence": "SDK Evolution and Simplification Goals: Umang explains that last year\u2019s Build introduced the Teams AI library in TypeScript and C#, while this year\u2019s focus is on the new integrated Teams SDK (00:01:15).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/901bde6f-0064-4018-891f-4b8fbaba8d71",
+      "video": "https://medius.microsoft.com/Embed/video-nc/901bde6f-0064-4018-891f-4b8fbaba8d71",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM332"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "DEM332",
+      "title": "From zero to teammate in 25 minutes: Build a Teams agent live",
+      "speakers": "Aamir Jawaid, Umang Sehgal",
+      "sentence": "He previews upcoming group UX features such as emoji reactions, targeted messages, slash commands, quoted replies, and markdown support, enhancing collaborative experiences with intelligent agents inside Teams (00:14:10).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/901bde6f-0064-4018-891f-4b8fbaba8d71",
+      "video": "https://medius.microsoft.com/Embed/video-nc/901bde6f-0064-4018-891f-4b8fbaba8d71",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM332"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "LIVE152",
+      "title": "What's new in GitHub Copilot CLI?",
+      "speakers": "Evan Boyle, Burke Holland",
+      "sentence": "Evan Boyle from the GitHub Copilot CLI team is introduced as a guest and described as both an engineering manager and hands-on developer passionate about developer tools (00:00:34).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/609cb95c-6575-4206-9586-c26853e87efd",
+      "video": "https://medius.microsoft.com/Embed/video-nc/609cb95c-6575-4206-9586-c26853e87efd",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE152"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "LIVE152",
+      "title": "What's new in GitHub Copilot CLI?",
+      "speakers": "Evan Boyle, Burke Holland",
+      "sentence": "Closing and Next Steps: As the session concludes, Evan announces upcoming talks, including one later that day on the GitHub app with Mario and another recorded deep dive with Cassidy on Copilot CLI (00:16:25).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/609cb95c-6575-4206-9586-c26853e87efd",
+      "video": "https://medius.microsoft.com/Embed/video-nc/609cb95c-6575-4206-9586-c26853e87efd",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE152"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "LIVE162",
+      "title": "From issue to merge in one loop: the GitHub Copilot app",
+      "speakers": "Burke Holland, Seth Juarez",
+      "sentence": "Introducing GitHub Copilot and Workflow Contexts: The hosts shift to explaining how GitHub Copilot fits into different developer workflows.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4ab34223-dd67-4829-846d-ca53fe37892b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4ab34223-dd67-4829-846d-ca53fe37892b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE162"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "LIVE162",
+      "title": "From issue to merge in one loop: the GitHub Copilot app",
+      "speakers": "Burke Holland, Seth Juarez",
+      "sentence": "They celebrate simplicity and accessibility, joking that everything now moves \u201cso slowly and it\u2019s so easy to understand all the new features\u201d (00:14:01).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/4ab34223-dd67-4829-846d-ca53fe37892b",
+      "video": "https://medius.microsoft.com/Embed/video-nc/4ab34223-dd67-4829-846d-ca53fe37892b",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE162"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "LIVE199",
+      "title": "Imagine Cup World Championship",
+      "speakers": "Patrick Brown, Rohan Ganesh, Surya Kukkapalli, Troy McBride, Vivaan Sawant, Advika Vuppala, Hans Yang",
+      "sentence": "Donna introduces the prestigious judging panel and announces that the winning team will receive $100,000 and a mentorship session with Satya Nadella (00:03:01).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e4271f82-0b86-40ab-a575-c7596029ed2e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e4271f82-0b86-40ab-a575-c7596029ed2e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE199"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "LIVE199",
+      "title": "Imagine Cup World Championship",
+      "speakers": "Patrick Brown, Rohan Ganesh, Surya Kukkapalli, Troy McBride, Vivaan Sawant, Advika Vuppala, Hans Yang",
+      "sentence": "Finalist Introductions and Projects Overview: The video transitions to short documentary-style vignettes introducing each finalist and their projects.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e4271f82-0b86-40ab-a575-c7596029ed2e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e4271f82-0b86-40ab-a575-c7596029ed2e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE199"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "LIVE199",
+      "title": "Imagine Cup World Championship",
+      "speakers": "Patrick Brown, Rohan Ganesh, Surya Kukkapalli, Troy McBride, Vivaan Sawant, Advika Vuppala, Hans Yang",
+      "sentence": "Announcement and Conclusion: As the excitement peaks, Donna and Hans congratulate the teams and acknowledge their mentors for helping shape their journeys (00:15:03).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e4271f82-0b86-40ab-a575-c7596029ed2e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e4271f82-0b86-40ab-a575-c7596029ed2e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE199"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "LIVE199",
+      "title": "Imagine Cup World Championship",
+      "speakers": "Patrick Brown, Rohan Ganesh, Surya Kukkapalli, Troy McBride, Vivaan Sawant, Advika Vuppala, Hans Yang",
+      "sentence": "Hans reveals a surprise announcement: Microsoft has increased the grand prize from $100,000 to $150,000 (00:16:07).",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/e4271f82-0b86-40ab-a575-c7596029ed2e",
+      "video": "https://medius.microsoft.com/Embed/video-nc/e4271f82-0b86-40ab-a575-c7596029ed2e",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE199"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "OD804",
+      "title": "Simplifying .NET Installs with dotnetup",
+      "speakers": "",
+      "sentence": "The roadmap includes internal preview, public preview, and GA milestones 00:38:06\u201300:41:02.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/bb273074-b360-4724-bb2f-31167ffe2b19",
+      "video": "https://medius.microsoft.com/Embed/video-nc/bb273074-b360-4724-bb2f-31167ffe2b19",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD804"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "OD804",
+      "title": "Simplifying .NET Installs with dotnetup",
+      "speakers": "",
+      "sentence": "Public preview will add self-updating behavior, signed validation, and integration with agent skill repositories for automation 00:41:19\u201300:43:07.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/bb273074-b360-4724-bb2f-31167ffe2b19",
+      "video": "https://medius.microsoft.com/Embed/video-nc/bb273074-b360-4724-bb2f-31167ffe2b19",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD804"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "OD810",
+      "title": "Build fast, not fragile with Rayfin and Microsoft Fabric",
+      "speakers": "Yohan Lasorsa",
+      "sentence": "Introducing Rayfin and Session Roadmap: The talk transitions to the introduction of Rayfin \u2014 a managed backend-as-a-service built on Microsoft Fabric, designed to bridge the gap between prototype and production 00:02:48\u201300:03:03.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8d61253f-f0fa-49ee-9f91-10e852b48f42",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8d61253f-f0fa-49ee-9f91-10e852b48f42",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD810"
+    },
+    {
+      "topic": "Developer Tools",
+      "code": "OD810",
+      "title": "Build fast, not fragile with Rayfin and Microsoft Fabric",
+      "speakers": "Yohan Lasorsa",
+      "sentence": "From Prototype to Production: After showing the MVP working locally, Lasorsa reveals that production deployment has been silently achieved through the same \u201cRayfin app\u201d command 00:28:01\u201300:28:36.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/8d61253f-f0fa-49ee-9f91-10e852b48f42",
+      "video": "https://medius.microsoft.com/Embed/video-nc/8d61253f-f0fa-49ee-9f91-10e852b48f42",
+      "session_url": "https://build.microsoft.com/en-US/sessions/OD810"
+    },
+    {
+      "topic": "Security + Governance",
+      "code": "LIVE141",
+      "title": "Programming robots",
+      "speakers": "Chip Huyen, John Maeda",
+      "sentence": "Guidance for Developers and Industry Safety Lessons: Moving from research to application, Chip advises developers to stay focused instead of chasing every AI advance or funding announcement 00:09:27\u201300:10:37.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/0a938684-4ae8-403c-9495-2138587205d5",
+      "video": "https://medius.microsoft.com/Embed/video-nc/0a938684-4ae8-403c-9495-2138587205d5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE141"
+    },
+    {
+      "topic": "Security + Governance",
+      "code": "ODSP926",
+      "title": "Build collaborative agents into apps with APIs",
+      "speakers": "Ziv Navoth, Edo Segal, Gillian Sheldon",
+      "sentence": "He reveals that the Omniagent API runs at merely one cent per render minute when developers use their own large language models \u2014 about twenty times cheaper than competing solutions.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/fea669e6-5140-4ea8-b097-a765d61311ee",
+      "video": "https://medius.microsoft.com/Embed/video-nc/fea669e6-5140-4ea8-b097-a765d61311ee",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP926"
+    },
+    {
+      "topic": "Security + Governance",
+      "code": "ODSP926",
+      "title": "Build collaborative agents into apps with APIs",
+      "speakers": "Ziv Navoth, Edo Segal, Gillian Sheldon",
+      "sentence": "Knowledge bases containing manuals and diagnostic data are attached, FAQs for safety and service routines are extended, and new tools like customer lookup are added.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/fea669e6-5140-4ea8-b097-a765d61311ee",
+      "video": "https://medius.microsoft.com/Embed/video-nc/fea669e6-5140-4ea8-b097-a765d61311ee",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP926"
+    },
+    {
+      "topic": "Other",
+      "code": "DEM376",
+      "title": "The story of the Global AI Community that spans every continent",
+      "speakers": "Roelant Dieben, Stephen Simon",
+      "sentence": "The presenters proudly announce milestones: over 200,000 registered members, 200 global chapters, and more than 4,600 events conducted to date 00:02:36\u201300:02:56.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/9b441553-0170-41c9-9cc5-34040734f410",
+      "video": "https://medius.microsoft.com/Embed/video-nc/9b441553-0170-41c9-9cc5-34040734f410",
+      "session_url": "https://build.microsoft.com/en-US/sessions/DEM376"
+    },
+    {
+      "topic": "Other",
+      "code": "LIVE116",
+      "title": "Scott and Mark learn to Vibe Check with Steve Sanderson",
+      "speakers": "Scott Hanselman, Steve Sanderson",
+      "sentence": "The hosts build suspense by suggesting Steve will unveil something entirely new\u2014perhaps created in a playful, AI-driven coding spree.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/412eb4f9-6245-4b44-9497-dd6019195fe5",
+      "video": "https://medius.microsoft.com/Embed/video-nc/412eb4f9-6245-4b44-9497-dd6019195fe5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE116"
+    },
+    {
+      "topic": "Other",
+      "code": "LIVE116",
+      "title": "Scott and Mark learn to Vibe Check with Steve Sanderson",
+      "speakers": "Scott Hanselman, Steve Sanderson",
+      "sentence": "He launches standard applications\u2014Notepad, Calculator, and Internet Explorer\u2014but reveals a key twist: none of these apps contain any code.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/412eb4f9-6245-4b44-9497-dd6019195fe5",
+      "video": "https://medius.microsoft.com/Embed/video-nc/412eb4f9-6245-4b44-9497-dd6019195fe5",
+      "session_url": "https://build.microsoft.com/en-US/sessions/LIVE116"
+    },
+    {
+      "topic": "Other",
+      "code": "ODSP902",
+      "title": "Build AI\u2011driven UIs in .NET MAUI with design systems",
+      "speakers": "Shriram Sankaran, Vishnu Menon",
+      "sentence": "The difference between outputs \u201cwith skills\u201d and \u201cwithout skills,\u201d highlighted at 00:06:23\u201300:06:48, reveals that an AI guided by skills creates more consistent, design-aware interfaces.",
+      "transcript": "https://medius.microsoft.com/video/asset/Transcript/d2ae05f2-1269-4f1c-aaa0-888f9b8d4e7a",
+      "video": "https://medius.microsoft.com/Embed/video-nc/d2ae05f2-1269-4f1c-aaa0-888f9b8d4e7a",
+      "session_url": "https://build.microsoft.com/en-US/sessions/ODSP902"
+    }
+  ]
+}
