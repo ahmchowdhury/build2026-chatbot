@@ -2,11 +2,28 @@
 
 > **Agentic chatbot grounded in 460 Microsoft Build 2026 sessions.** Ask a focused question, get session‑level answers with timestamps, speaker names, and direct links to the official session page, transcript, and video. Or ask for a whole‑topic summary.
 
-![status](https://img.shields.io/badge/sessions-460-7c5cff) ![ai-summaries](https://img.shields.io/badge/AI%20summaries-170-7c5cff) ![transcripts](https://img.shields.io/badge/transcripts-185-7c5cff) ![chunks](https://img.shields.io/badge/RAG%20chunks-1265-7c5cff) ![python](https://img.shields.io/badge/python-3.10+-blue)
+![status](https://img.shields.io/badge/sessions-460-7c5cff) ![ai-summaries](https://img.shields.io/badge/AI%20summaries-170-7c5cff) ![transcripts](https://img.shields.io/badge/transcripts-185-7c5cff) ![chunks](https://img.shields.io/badge/RAG%20chunks-1265-7c5cff) ![python](https://img.shields.io/badge/python-3.10+-blue) ![eval](https://img.shields.io/badge/eval-96%25%20(24/25)-brightgreen) ![grounded](https://img.shields.io/badge/groundedness-0.94-brightgreen)
 
 **🌐 Live demo:** https://build2026-chatbot-50261.azurewebsites.net
 
 ---
+
+## Engines
+
+The chatbot has **two interchangeable RAG engines** behind the same `/api/chat` interface — flip with the `USE_AGENTIC_RETRIEVAL` env var:
+
+| Engine | Path | Default | Use when |
+| --- | --- | --- | --- |
+| **Agentic** (Azure AI Search Agentic Retrieval, 2026-05-01-preview) | KB does query planning + multi-step hybrid+semantic retrieval + grounded answer synthesis in one round-trip | **production** (`USE_AGENTIC_RETRIEVAL=1`) | You want highest answer quality, are OK with 2-10s p50 latency, have a KB provisioned. |
+| **Hybrid** (custom Azure AI Search + Azure OpenAI) | Direct hybrid query → semantic rerank → AOAI gpt-4o synthesis | fallback (`USE_AGENTIC_RETRIEVAL` unset) | KB not provisioned, or you need a leaner / cheaper / lower-latency path. |
+
+Live latest measured **eval results** (`evals/` harness, 25 gold cases, gpt-4o judge):
+
+| Engine | Pass rate | Groundedness | Attribution | p50 / p95 |
+| --- | --- | --- | --- | --- |
+| Hybrid | 52% | 0.61 | 0.74 | 1.8s / 4.1s |
+| **Agentic (live)** | **96%** | **0.94** | **1.00** | 2.7s / 17s |
+
 
 ## What it does
 
