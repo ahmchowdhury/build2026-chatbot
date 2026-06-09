@@ -66,6 +66,9 @@ INDEX_DEF: Dict = {
         {"name": "sessionPage", "type": "Edm.String", "retrievable": True},
         {"name": "transcriptUrl", "type": "Edm.String", "retrievable": True},
         {"name": "videoUrl", "type": "Edm.String", "retrievable": True},
+        {"name": "hasAiSummary", "type": "Edm.Boolean",
+         "filterable": True, "facetable": True, "retrievable": True,
+         "sortable": True},
         {"name": "passageVector", "type": "Collection(Edm.Single)",
          "searchable": True,
          "dimensions": int(os.environ.get("RAG_EMBED_DIM", "1536")),
@@ -141,6 +144,7 @@ def chunk_session(s: Dict) -> List[Dict]:
     video = s.get("video") or ""
 
     summary = s.get("aiSummary") or ""
+    has_ai_summary = bool(summary.strip())
     base_meta = {
         "sessionCode": code,
         "sessionTitle": title,
@@ -151,6 +155,7 @@ def chunk_session(s: Dict) -> List[Dict]:
         "sessionPage": page,
         "transcriptUrl": transcript,
         "videoUrl": video,
+        "hasAiSummary": has_ai_summary,
     }
 
     chunks: List[Dict] = []

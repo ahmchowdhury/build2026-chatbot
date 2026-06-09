@@ -466,6 +466,75 @@ class BuildAgent:
         cleaned = re.sub(r" ([,.;:])", r"\1", cleaned)
         return cleaned
 
+    @staticmethod
+    def _audit_title_citation_match(answer: str,
+                                    refs: List[Dict]) -> str:
+        """Fix the 'right session named, wrong code cited' bug. When the
+        synthesizer writes a bullet/sentence that explicitly names a
+        session by its title (e.g. *"Foundry IQ: Fuel agents with
+        enterprise knowledge"*) but cites a DIFFERENT session's code at
+        the end (e.g. [BRK230] when BRK246 is the actual Foundry IQ
+        session), swap the citation to the correct code.
+
+        Heuristic: for each line of the answer, find any reference title
+        that appears in the line (case-insensitive, normalized
+        whitespace), then ensure the trailing [CODE] cite on that line
+        matches that reference's sessionCode. If it doesn't, replace
+        the wrong code with the correct one (preserving any other valid
+        cites on the line).
+        """
+        if not refs:
+            return answer
+
+        # Build (normalized_title, code) pairs. Drop very short titles
+        # (<20 chars) to avoid false matches on generic phrases.
+        def _norm(s: str) -> str:
+            return re.sub(r"\s+", " ", (s or "").lower()).strip()
+
+        title_to_code: List[tuple] = []
+        for r in refs:
+            code = r.get("sessionCode") or ""
+            title = _norm(r.get("sessionTitle") or "")
+            if code and title and len(title) >= 20:
+                title_to_code.append((title, code))
+        if not title_to_code:
+            return answer
+
+        cite_re = re.compile(r"\[([A-Z]{2,4}\d{2,4}(?:-[A-Z0-9]+)?)\]")
+        lines = answer.split("\n")
+        fixed_lines: List[str] = []
+        for line in lines:
+            line_norm = _norm(line)
+            matched_codes: List[str] = []
+            for t, c in title_to_code:
+                if t in line_norm and c not in matched_codes:
+                    matched_codes.append(c)
+            if matched_codes:
+                # The line explicitly names one or more sessions. The cite(s)
+                # at the end MUST include those codes. If we find a cite
+                # whose code is NOT in matched_codes AND the matched_codes
+                # set is non-empty, swap the first wrong cite to the
+                # first matched code.
+                wrong_cites: List[int] = []
+                cites = list(cite_re.finditer(line))
+                if cites:
+                    have_codes = {m.group(1) for m in cites}
+                    missing_codes = [c for c in matched_codes if c not in have_codes]
+                    wrong_cites = [i for i, m in enumerate(cites)
+                                   if m.group(1) not in matched_codes]
+                    if missing_codes and wrong_cites:
+                        # Swap the first wrong cite to the first missing
+                        # correct code. Build new line by replacing in-place.
+                        new_code = missing_codes[0]
+                        m = cites[wrong_cites[0]]
+                        line = (line[:m.start()] + f"[{new_code}]" +
+                                line[m.end():])
+                    elif missing_codes and not cites:
+                        # No cite at all but a title is named — append.
+                        line = line.rstrip() + f" [{missing_codes[0]}]"
+            fixed_lines.append(line)
+        return "\n".join(fixed_lines)
+
     def _render_agentic_answer(self, query: str,
                                speaker_codes: Optional[Set[str]],
                                speaker_label: Optional[str],
@@ -553,6 +622,11 @@ class BuildAgent:
         # memory. Must run BEFORE refusal-detection so the cleaned text is
         # what the user sees AND what citation_support checks.
         answer_md = self._strip_unauthorized_citations(answer_md, seen_codes)
+        # Then audit title↔code matching: when a bullet explicitly names
+        # session "Foundry IQ: Fuel agents..." but cites [BRK230] instead
+        # of [BRK246], swap. This catches gpt-4o's habit of defaulting to
+        # the most-cited code in its working set.
+        answer_md = self._audit_title_citation_match(answer_md, refs)
 
         # If the KB produced no answer text but did return references, fall
         # back to a structured listing (rare path — happens when synthesis

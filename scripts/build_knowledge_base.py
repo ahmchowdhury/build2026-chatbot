@@ -123,11 +123,20 @@ def upsert_knowledge_source() -> None:
     body = {
         "name": KS_NAME,
         "description": ("Microsoft Build 2026 session passages — "
-                        "1 row per AI-summary paragraph."),
+                        "1 row per AI-summary paragraph. Filters out "
+                        "sessions without AI summaries (those weren't "
+                        "recorded for public consumption, so chunks for "
+                        "them only contain title + abstract — not "
+                        "groundable content)."),
         "kind": "searchIndex",
         "searchIndexParameters": {
             "searchIndexName": INDEX_NAME,
             "semanticConfigurationName": SEMANTIC_CONFIG_NAME,
+            # CRITICAL: never retrieve from sessions without AI summaries.
+            # Their "passage" field is just the abstract — BM25 false-matches
+            # on terms like "prompt" and pollutes the references list with
+            # sessions that have no real grounding content.
+            "baseFilter": "hasAiSummary eq true",
             # Fields returned in `references[].sourceData` so the synthesizer
             # has session metadata + the passage to ground on.
             "sourceDataFields": [
@@ -217,7 +226,24 @@ def upsert_knowledge_base() -> None:
             "8. Every factual claim must end with at least one bracketed "
             "[sessionCode] citation pointing to a reference that actually "
             "supports it. Sentences with NO citation are not allowed "
-            "unless they are pure connective text.\n\n"
+            "unless they are pure connective text.\n"
+            "8a. CITATION MUST MATCH THE SESSION YOU NAMED. When a "
+            "sentence describes a specific session by name "
+            "(e.g. 'Foundry IQ: Fuel agents with enterprise knowledge'), "
+            "the bracketed citation MUST be the sessionCode of THAT "
+            "session (BRK246 for Foundry IQ), NOT a different session "
+            "code from the reference list. Bad example: 'Foundry IQ: "
+            "Fuel agents... discusses caching [BRK230]' is WRONG when "
+            "BRK230 is a different session. Look up the session by its "
+            "title in the references and use its actual sessionCode. "
+            "Do NOT default to a frequently-cited code like BRK230 for "
+            "every claim.\n"
+            "8b. ONE CITATION PER CLAIM means the citation that ACTUALLY "
+            "supports that specific claim. If your sentence joins facts "
+            "from two sessions, cite both: [BRK246][BRK230]. Never use "
+            "one code as a placeholder when you cannot remember which "
+            "reference the fact came from — look it up in the "
+            "references list.\n\n"
             "STRICT ATTRIBUTION RULES:\n"
             "9. If the user names a specific speaker, only attribute "
             "quotes/claims to that speaker when the reference passage "
