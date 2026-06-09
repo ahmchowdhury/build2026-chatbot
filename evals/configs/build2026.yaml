@@ -1,0 +1,62 @@
+# Event config — Microsoft Build 2026
+# Keep this file small. Anything that's *event-specific* but doesn't change
+# per-case goes here. Everything else is in gold/build2026.yaml.
+
+event_id: build2026
+event_name: "Microsoft Build 2026"
+session_code_regex: '\b([A-Z]{2,4}\d{2,4}(?:-[A-Z0-9]+)?)\b'
+data_path: data/sessions.json
+session_code_field: code
+session_title_field: title
+speaker_field: speakers
+summary_field: aiSummary
+
+# Phrases the agent emits when it's refusing / has weak match. The eval
+# harness uses the agent's `kind` field as primary signal; these are a
+# secondary tell, so keep them tight and tied to actual rendered text.
+refusal_markers:
+  - "couldn't find"
+  - "could not find"
+  - "didn't find"
+  - "not specifically discuss"
+  - "did not explicitly discuss"
+  - "did not discuss"
+  - "do not explicitly define"
+  - "do not explicitly mention"
+  - "cannot confirm"
+  - "do not explicitly state"
+  - "doesn't explicitly"
+  - "doesn't directly address"
+  - "no microsoft build 2026"
+  - "i don't see"
+  - "not covered"
+  - "not in the available"
+  - "no session"
+  - "is not directly available"
+
+# Kinds emitted by `BuildAgent` that signal a refusal/weak-match.
+refusal_kinds:
+  - not-found
+  - weak
+  - hint
+
+# Latency budget for an individual /api/chat call (synthesis + retrieval).
+# Agentic Retrieval (the preferred path) routinely hits 8-15s on medium
+# reasoning effort: query-planning LLM call, parallel sub-queries, semantic
+# rerank, answer-synthesis LLM call. Generous-but-bounded.
+default_max_latency_ms: 25000
+
+# CI gating thresholds — runner exits non-zero if violated with --strict.
+#
+# Calibrated against gpt-4o-as-judge variance:
+# - min_groundedness 0.70 — RAG industry-standard floor. gpt-4o-as-judge
+#   variance for borderline-supported claims clusters at 0.65-0.80;
+#   answers below 0.50 indicate real hallucination. 0.70 stably catches
+#   fabrication while tolerating one or two adjacent-context claims that
+#   gpt-4o synthesizers emit even with strict instructions.
+# - min_pass_rate 0.85 — most cases must pass cleanly.
+# - min_attribution_fidelity 0.80 — captures real speaker mix-ups
+#   (those score <0.6) while tolerating minor wording.
+min_pass_rate: 0.85
+min_groundedness: 0.70
+min_attribution_fidelity: 0.80

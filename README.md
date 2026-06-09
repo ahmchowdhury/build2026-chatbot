@@ -2,7 +2,9 @@
 
 > **Agentic chatbot grounded in 460 Microsoft Build 2026 sessions.** Ask a focused question, get session‑level answers with timestamps, speaker names, and direct links to the official session page, transcript, and video. Or ask for a whole‑topic summary.
 
-![status](https://img.shields.io/badge/sessions-460-7c5cff) ![ai-summaries](https://img.shields.io/badge/AI%20summaries-170-7c5cff) ![transcripts](https://img.shields.io/badge/transcripts-185-7c5cff) ![python](https://img.shields.io/badge/python-3.10+-blue)
+![status](https://img.shields.io/badge/sessions-460-7c5cff) ![ai-summaries](https://img.shields.io/badge/AI%20summaries-170-7c5cff) ![transcripts](https://img.shields.io/badge/transcripts-185-7c5cff) ![chunks](https://img.shields.io/badge/RAG%20chunks-1265-7c5cff) ![python](https://img.shields.io/badge/python-3.10+-blue)
+
+**🌐 Live demo:** https://build2026-chatbot-50261.azurewebsites.net
 
 ---
 
