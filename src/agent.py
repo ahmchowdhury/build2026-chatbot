@@ -461,6 +461,34 @@ class BuildAgent:
         cleaned = re.sub(r"\[ref_id\s*:\s*\d+\]", "", cleaned, flags=re.I)
         cleaned = re.sub(r"\[Source\s+\d+\]", "", cleaned, flags=re.I)
         cleaned = re.sub(r"\(\s*ref\s+\d+\s*\)", "", cleaned, flags=re.I)
+        # Strip `[Some Phrase:NN]` style internal-index cites the synthesizer
+        # sometimes emits (e.g. `[Under the hood:39]` referring to passage
+        # index 39 of the "Under the hood…" session). The trailing `:NN`
+        # is the giveaway. The legitimate `[CODE]` form has no colon.
+        cleaned = re.sub(r"\[[^\[\]]{2,80}:\s*\d+\]", "", cleaned)
+        # Strip title-style citations like `[Microsoft Build keynote]` or
+        # `[Build smarter AI systems in Foundry]` — bracketed text that
+        # looks like a session title but is NOT in our [CODE] format.
+        # Only strip when:
+        #   - The bracket content has no slash/url-like chars
+        #   - The bracket is NOT immediately followed by `(` (markdown
+        #     link syntax `[text](url)`)
+        #   - The content does NOT match the [CODE] pattern (already
+        #     handled above)
+        # We're conservative — require the content to have a space or
+        # title-case (multi-word) feel so we don't strip code identifiers.
+        def _drop_title_cite(m: "re.Match[str]") -> str:
+            content = m.group(1)
+            # If it looks like a [CODE] (handled separately), keep
+            if re.fullmatch(r"[A-Z]{2,4}\d{2,4}(?:-[A-Z0-9]+)?", content):
+                return m.group(0)
+            # Skip if it has URL-ish chars
+            if "/" in content or "http" in content.lower():
+                return m.group(0)
+            # Drop everything else (likely title-style fake cite)
+            return ""
+        cleaned = re.sub(r"\[([^\[\]\(\)]{2,80})\](?!\()",
+                         _drop_title_cite, cleaned)
         # Tidy up double spaces / orphan punctuation we may have left
         cleaned = re.sub(r" {2,}", " ", cleaned)
         cleaned = re.sub(r" ([,.;:])", r"\1", cleaned)
@@ -535,6 +563,152 @@ class BuildAgent:
             fixed_lines.append(line)
         return "\n".join(fixed_lines)
 
+    @staticmethod
+    def _audit_phrase_grounding(answer: str,
+                                refs: List[Dict]) -> str:
+        """Fix the 'right phrase, wrong passage cited' bug. When a line
+        of the answer mentions a distinctive product/model name (e.g.
+        *"Image 2.5"*, *"Voice 2"*, *"Agent 365"*, *"Mai Code 1"*,
+        *"Maia 200"*) but the cited [CODE]'s retrieved passage does
+        NOT contain that phrase, look for a retrieved passage that
+        DOES contain the phrase and swap the citation to that
+        session's code.
+
+        This catches gpt-4o's habit of writing factually-correct
+        bullets but rotating cites across the retrieved-set without
+        per-claim attribution. We only swap when there is a clear
+        single match in the retrieved set, so we don't introduce new
+        errors.
+        """
+        if not refs:
+            return answer
+
+        # Build {code: lowercased_passage} for retrieved refs only.
+        # Collapse passages from the same session if they appear
+        # multiple times (multi-chunk hits).
+        passage_by_code: Dict[str, str] = {}
+        for r in refs:
+            code = r.get("sessionCode")
+            if not code:
+                continue
+            p = (r.get("passage") or "").lower()
+            if not p:
+                continue
+            existing = passage_by_code.get(code, "")
+            if p not in existing:
+                passage_by_code[code] = (existing + "\n" + p) if existing else p
+        if not passage_by_code:
+            return answer
+
+        # Distinctive-phrase patterns. Each must be specific enough
+        # that we expect a literal match in the underlying passage —
+        # not a generic word like "agent" or "model". Captures:
+        #   - "Image 2.5", "Voice 2", "Transcribe 1.5"
+        #   - "Agent 365", "Maia 200", "Cobalt 200"
+        #   - "Mai Code 1", "Mai Voice", "Mai Image"
+        #   - "Project Solara", "Project Mariner"
+        #   - "Foundry IQ", "Foundry Local"
+        #   - Standalone "Manifold", "HorizonDB" (compound caps)
+        phrase_patterns = [
+            r"\b[A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+)?\s+\d+(?:\.\d+)?(?:\s+(?:Flash|Pro|Max|Mini|Fast))?\b",
+            r"\b(?:Mai|MAI)\s+[A-Z][a-zA-Z]+(?:\s+\d+(?:\.\d+)?)?(?:\s+Flash)?\b",
+            r"\bProject\s+[A-Z][a-zA-Z]+\b",
+            r"\bFoundry\s+(?:IQ|Local)\b",
+            r"\b(?:Maia|Cobalt)\s+\d+\b",
+            r"\bAgent\s+365\b",
+            r"\b(?:Manifold|HorizonDB|Solara|Mariner)\b",
+        ]
+        phrase_re = re.compile("|".join(phrase_patterns))
+        cite_re = re.compile(r"\[([A-Z]{2,4}\d{2,4}(?:-[A-Z0-9]+)?)\]")
+
+        # Phrases that are too generic to attribute on (would match
+        # almost anything). Filter out post-extraction.
+        STOP_PHRASES = {
+            "build 2026", "microsoft build", "azure ai",
+            "ai foundry", "github copilot", "visual studio",
+        }
+
+        lines = answer.split("\n")
+
+        # Precompute the union of all distinctive phrases that appear
+        # anywhere in the answer. Use this to rank retrieved passages
+        # by global topical coverage — when a single line has a phrase
+        # that appears in multiple passages, prefer the passage that
+        # covers MORE of the answer's phrases overall.
+        all_answer_phrases: List[str] = []
+        for ln in lines:
+            for ph in phrase_re.findall(ln):
+                ph_clean = ph.strip()
+                if (len(ph_clean) >= 4
+                        and ph_clean.lower() not in STOP_PHRASES
+                        and ph_clean not in all_answer_phrases):
+                    all_answer_phrases.append(ph_clean)
+        global_score: Dict[str, int] = {
+            code: sum(1 for p in all_answer_phrases
+                      if p.lower() in passage)
+            for code, passage in passage_by_code.items()
+        }
+
+        new_lines: List[str] = []
+        for line in lines:
+            cites = list(cite_re.finditer(line))
+
+            raw_phrases = phrase_re.findall(line)
+            phrases: List[str] = []
+            for ph in raw_phrases:
+                ph_clean = ph.strip()
+                if (len(ph_clean) >= 4
+                        and ph_clean.lower() not in STOP_PHRASES
+                        and ph_clean not in phrases):
+                    phrases.append(ph_clean)
+
+            if not phrases:
+                new_lines.append(line)
+                continue
+
+            # Score each retrieved passage by line-phrase match count.
+            # Tie-break: (a) higher global_score wins, (b) earlier
+            # reranker rank wins.
+            scored: List[tuple] = []
+            for idx, (code, passage) in enumerate(passage_by_code.items()):
+                matched = sum(1 for p in phrases
+                              if p.lower() in passage)
+                if matched > 0:
+                    scored.append(
+                        (matched, global_score.get(code, 0), -idx, code)
+                    )
+            scored.sort(reverse=True)
+            top_codes_full_match = [c for s, _, _, c in scored
+                                    if s == len(phrases)]
+
+            if not cites:
+                if top_codes_full_match:
+                    line = line.rstrip() + f" [{top_codes_full_match[0]}]"
+                new_lines.append(line)
+                continue
+
+            new_line = line
+            for m in cites:
+                code = m.group(1)
+                cited_passage = passage_by_code.get(code, "")
+                if not cited_passage:
+                    continue
+                phrases_in_cited = [p for p in phrases
+                                    if p.lower() in cited_passage]
+                if phrases_in_cited:
+                    continue
+
+                if (top_codes_full_match
+                        and top_codes_full_match[0] != code):
+                    target = m.group(0)
+                    idx = new_line.find(target)
+                    if idx >= 0:
+                        new_line = (new_line[:idx]
+                                    + f"[{top_codes_full_match[0]}]"
+                                    + new_line[idx + len(target):])
+            new_lines.append(new_line)
+        return "\n".join(new_lines)
+
     def _render_agentic_answer(self, query: str,
                                speaker_codes: Optional[Set[str]],
                                speaker_label: Optional[str],
@@ -603,34 +777,74 @@ class BuildAgent:
         if not refs and not answer_md:
             return self._not_found(query, trace=trace, t0=t0)
 
-        # Append a "References" footer with all unique sessions cited.
-        seen_codes: Set[str] = set()
-        ref_lines: List[str] = []
+        # Build the lookup of all retrieved sessions so we can render
+        # references for any codes the answer ends up citing.
+        ref_by_code: Dict[str, Dict] = {}
         for r in refs:
             code = r.get("sessionCode")
-            if not code or code in seen_codes:
-                continue
-            seen_codes.add(code)
-            url = SESSION_URL.format(code=code)
-            line = f"- **[{code}]** *{r.get('sessionTitle','')}* — [{url}]({url})"
-            if r.get("transcriptUrl"):
-                line += f" · [Transcript]({r['transcriptUrl']})"
-            ref_lines.append(line)
+            if code and code not in ref_by_code:
+                ref_by_code[code] = r
+        all_retrieved_codes: Set[str] = set(ref_by_code.keys())
 
         # Strip any citation whose code wasn't actually retrieved — defends
         # against the synthesizer hallucinating session codes from training
         # memory. Must run BEFORE refusal-detection so the cleaned text is
         # what the user sees AND what citation_support checks.
-        answer_md = self._strip_unauthorized_citations(answer_md, seen_codes)
+        answer_md = self._strip_unauthorized_citations(answer_md, all_retrieved_codes)
         # Then audit title↔code matching: when a bullet explicitly names
         # session "Foundry IQ: Fuel agents..." but cites [BRK230] instead
         # of [BRK246], swap. This catches gpt-4o's habit of defaulting to
         # the most-cited code in its working set.
         answer_md = self._audit_title_citation_match(answer_md, refs)
+        # Then phrase-level grounding audit: when a bullet mentions a
+        # distinctive product/model name (e.g. "Image 2.5", "Agent 365",
+        # "Maia 200") but the cited [CODE]'s passage doesn't contain
+        # that phrase, swap to a retrieved passage that does. Catches
+        # the per-claim cite-attribution gap (synthesizer rotates cites
+        # randomly across the retrieved set).
+        answer_md = self._audit_phrase_grounding(answer_md, refs)
 
-        # If the KB produced no answer text but did return references, fall
-        # back to a structured listing (rare path — happens when synthesis
-        # is gated by content filters).
+        # Build the rendered References list. Strategy:
+        #   1) Codes the cleaned answer body cites — these are the
+        #      sessions the synthesizer says it used.
+        #   2) Plus the top retrieved refs (by reranker score, capped at
+        #      8) so the user has visibility into all sources the agent
+        #      actually pulled — even if the synthesizer didn't cite
+        #      them inline. This helps when a claim is grounded in a
+        #      retrieved passage but the synthesizer mis-cited it
+        #      (so the user can verify the broader source set).
+        # Keeping the cap at 8 (not 30+) avoids the reference-dump UX
+        # problem where the user sees 30 sources for a 3-paragraph
+        # answer.
+        cite_re = re.compile(r"\[([A-Z]{2,4}\d{2,4}(?:-[A-Z0-9]+)?)\]")
+        cited_in_body: List[str] = []
+        for m in cite_re.finditer(answer_md):
+            c = m.group(1)
+            if c in ref_by_code and c not in cited_in_body:
+                cited_in_body.append(c)
+
+        # Order: cited-in-body first (most relevant), then top retrieved
+        # not yet shown. ref_by_code preserves insertion order from
+        # `refs`, which the agentic API already sorts by reranker score.
+        ordered: List[str] = list(cited_in_body)
+        for code in ref_by_code:
+            if code not in ordered:
+                ordered.append(code)
+            if len(ordered) >= 8:
+                break
+
+        ref_lines: List[str] = []
+        for code in ordered:
+            r = ref_by_code[code]
+            url = SESSION_URL.format(code=code)
+            line = f"- **[{code}]** *{r.get('sessionTitle','')}* — [{url}]({url})"
+            if r.get("transcriptUrl"):
+                line += f" · [Transcript]({r['transcriptUrl']})"
+            ref_lines.append(line)
+        seen_codes: Set[str] = set(ordered)
+
+        # If the KB produced no answer text but did return references,
+        # fall back to a structured listing.
         if not answer_md:
             answer_md = (f"Here are the Microsoft Build 2026 session "
                          f"excerpts that match *“{query}”*:")
